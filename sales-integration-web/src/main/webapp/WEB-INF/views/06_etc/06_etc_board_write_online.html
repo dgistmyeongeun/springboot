@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>영업관리시스템_고객관리</title>
+<link rel="stylesheet" type="text/css" href="../css/sales.css" />
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<script>
+//menu left
+$(document).ready(function(){
+    $(".menu>a").click(function(){
+        var submenu = $(this).next("ul"); 
+            if( submenu.is(":visible")){
+            submenu.slideUp();
+            }else{
+            submenu.slideDown();
+        }
+    });
+});
+    
+//menu top
+$(function(){      
+  $(".menu li").hover(function(){
+    $('ul:first',this).show();
+  }, function(){
+    $('ul:first',this).hide();
+  });
+});
+</script>
+
+</head>
+
+<body>
+	<!-- menuTop -->
+    <div class="navbar_aa">
+		<div class="nav">
+			<h1>
+				<a href="#">
+					<img src="../images/logo_bizppurio.png" alt="비즈뿌리오로고">
+					<span class="f15">영업관리시스템</span>
+				</a>
+			</h1>
+			<ul class="menu m6">
+				<li><a href="#" class="nav_second">영업관리</a>                    
+					<ul class="sub">
+						<li></li>
+						<li><a href="#">실적관리</a></li>
+						<li><a href="#">담보관리</a></li>
+					</ul>
+				</li>
+				<li><a href="#">고객관리</a>
+					 <ul class="sub">
+						<li></li>
+						<li><a href="#">회원리스트</a></li>
+						<li><a href="#">승인 전 회원 리스트</a></li>
+						<li><a href="#">해지고객 리스트</a></li>
+						<li><a href="#">여신 관리</a></li>
+						<li><a href="#">발신번호 관리</a></li>
+						<li><a href="#">카카오톡 비즈메시지</a></li>
+						<li><a href="#">수동 입출금</a></li>
+						<li><a href="#">매입처 관리</a></li>
+					</ul>
+				</li>
+				<li><a href="#">정산관리</a>
+					<ul class="sub">
+						<li></li>
+						<li><a href="#">정산정보설정</a></li>
+						<li><a href="#">선불</a></li>
+						<li><a href="#">후불</a></li>
+						<li><a href="#">영업대행사</a></li>
+						<li><a href="#">환불</a></li>
+						<li><a href="#">자동이체</a></li>
+					</ul>
+				</li>
+				<li><a href="#">매출/매입관리</a>
+					<ul class="sub">
+						<li></li>
+						<li><a href="#">매출조회</a></li>
+						<li><a href="#">선수수익관리</a></li>
+						<li><a href="#">영업대행사 매출</a></li>
+						<li><a href="#">매입관리</a></li>
+					</ul>
+				</li>
+				<li><a href="#">통계</a>
+					<ul class="sub">
+						<li></li>
+						<li><a href="#">계정별 발송통계</a></li>
+						<li><a href="#">라인별 발송현황</a></li>
+						<li><a href="#">발송추이</a></li>
+						<li><a href="#">발송내역 조회</a></li>                            
+					</ul>
+				</li>
+				<li><a href="#">기타</a>
+					<ul class="sub">
+						<li></li>
+						<li><a href="#">ASP 관리</a></li>
+						<li><a href="#">B2C 등록</a></li>
+						<li><a href="#">스팸모니터링</a></li>
+						<li><a href="#">게시물 관리</a></li>                            
+						<li><a href="#">예약발송 취소</a></li>
+						<li><a href="#">회원정보 수정</a></li>
+						<li><a href="#">정산담당자 정보입력</a></li>                                                        
+					</ul>
+				</li>
+			</ul>
+			<div class="btn_box"><!--<a href="#" class="pw mr_3">비밀번호</a>--><a href="#" class="logout">로그아웃</a></div>
+		</div>
+    </div>
+	<!-- //menuTop -->
+	
+	<!-- sidebar -->
+	<div class="sidebar">
+		<ul class="nav">
+			<li class="menu"><a href="#">ASP 관리</a></li>
+			<li class="menu"><a href="#">B2C 등록<i></i></a>
+				<ul class="nav_second">
+					<li><a href="#">사용자 등록</a></li>
+					<li><a href="#">리스트 관리</a></li>
+				</ul>
+			</li>
+			<li class="menu"><a href="#">스팸모니터링</a></li>
+			<li class="menu"><a href="#">게시물 관리<i></i></a>
+				<ul class="nav_second">
+					<li><a href="#">공지/팝업</a></li>
+					<li><a href="#">자료실/FAQ</a></li>
+					<li><a href="#">온라인상담</a></li>
+				</ul>
+			</li>
+			<li class="menu"><a href="#">예약발송 취소</a></li>
+			<li class="menu"><a href="#">회원정보 수정</a></li>			
+			<li class="menu"><a href="#">정산담당자 정보 입력</a></li>									
+		</ul>
+	</div> 
+	<!-- //sidebar -->
+   
+    <!-- contents -->
+    <div class="container_r">    
+    	<!-- title -->
+    	<div class="title_b">
+    		<em></em>
+    		<h2>온라인 상담</h2>
+			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="">기타</a> > <a href="">게시물 관리</a> > <a href="">온라인 상담</a></blockquote>
+		</div>
+		<!-- //title -->
+				
+		<!-- message -->
+		<div class="box_b3 mb_15">
+			<ul class="txt_info">
+				<li>상담에 대한 답변을 작성합니다.</li>
+				<li>처리완료 시 상담내용은 이메일로 전송됩니다.</li>
+			</ul>					
+		</div>
+		<!-- //message -->
+		
+		<!-- button -->
+		<div class="align_r mb_15">
+			<a href="" class="btn md btn_gray">목록</a>
+		</div>
+		<!-- //button -->
+		
+		<table class="tb_list_b">
+			<colgroup>
+				<col style="width:14.6%">
+				<col style="width:14.6%">
+				<col style="width:16.6%">
+				<col style="width:14.6%">
+				<col style="width:16.6%">
+				<col style="width:20.6%">
+				<col style="width:18.6%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th>서비스</th>
+					<th>ID</th>
+					<th>업체명</th>
+					<th>상담 등록일</th>
+					<th>상태</th>
+					<th>이메일</th>
+					<th>휴대폰번호</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>비즈뿌리오</td>
+					<td>daou</td>
+					<td>다우기술</td>
+					<td>2017.01.22</td>
+					<td>미처리</td>
+					<td>ques123@naver.com</td>
+					<td>01012345678</td>
+				</tr>
+			</tbody>			
+		</table>
+		
+		<table class="tb_list2_a">
+			<colgroup>
+				<col style="width:15%">
+				<col style="width:85%">
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>질문 유형/제목</th>
+					<td><label>메시지 발송 <input type="text" class="w200" value="문자 발송은 어떻게 하나요?"></label></td>
+				</tr>
+				<tr>
+					<th>질문 내용</th>
+					<td>
+						<textarea class="p90" rows="10"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th><b class="txt_c_red">*</b> 답변</th>
+					<td>
+						<!-- 게시판 에디터 자리 -->
+						게시판서식 (유핏 어드민 제공)
+						<!-- //게시판 에디터 자리 -->
+					</td>
+				</tr>
+				<tr>
+					<th>첨부 파일</th>
+					<td>
+						<input type="file" class="w300 mr_5">
+					</td>
+				</tr>
+				<tr>
+					<th>처리 상태</th>
+					<td>
+						<select class="w200">
+							<option value="1">1</option>
+						</select>
+						<p class="red">* 처리완료 시에만 메일로 전송됩니다.</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<!-- 하단 버튼 -->
+		<div class="btn_area mb_15">
+			<a href="#" class="btn lg btn_blue">등록</a>
+			<a href="#" class="btn lg btn_gray">취소</a>
+		</div>
+		<!-- //하단 버튼 -->
+		
+	</div>
+	<!-- //contents -->
+</body>
+</html>
