@@ -33,14 +33,14 @@
 			<li class="menu"><a href="spam.etc">스팸모니터링</a></li>
 			<li class="menu"><a href="#">게시물 관리<i></i></a>
 				<ul class="nav_second">
-					<li><a href="popup.etc">공지/팝업</a></li>
-					<li><a href="#">자료실/FAQ</a></li>
-					<li><a href="#">온라인상담</a></li>
+					<li><a href="notice.etc">공지/팝업</a></li>
+					<li><a href="rfroom.etc">자료실/FAQ</a></li>
+					<li><a href="online.etc">온라인상담</a></li>
 				</ul>
 			</li>
-			<li class="menu"><a href="#">예약발송 취소</a></li>
-			<li class="menu"><a href="#">회원정보 수정</a></li>			
-			<li class="menu"><a href="#">정산담당자 정보 입력</a></li>									
+			<li class="menu"><a href="reservation.etc">예약발송 취소</a></li>
+			<li class="menu"><a href="member.etc">회원정보 수정</a></li>			
+			<li class="menu"><a href="account.etc">정산담당자 정보 입력</a></li>									
 		</ul>
 	</div> 
 	<!-- //sidebar -->

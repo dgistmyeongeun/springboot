@@ -3,7 +3,7 @@
 		<div class="nav">
 			<h1>
 				<a href="#">
-					<img src="../images/logo_bizppurio.png" alt="비즈뿌리오로고">
+					<img src="images/logo_bizppurio.png" alt="비즈뿌리오로고">
 					<span class="f15">영업관리시스템</span>
 				</a>
 			</h1>
@@ -57,16 +57,16 @@
 						<li><a href="#">발송내역 조회</a></li>                            
 					</ul>
 				</li>
-				<li><a href="asp.etc">기타</a>
+				<li><a href="#">기타</a>
 					<ul class="sub">
 						<li></li>
 						<li><a href="asp.etc">ASP 관리</a></li>
-						<li><a href="#">B2C 등록</a></li>
-						<li><a href="#">스팸모니터링</a></li>
-						<li><a href="#">게시물 관리</a></li>                            
-						<li><a href="#">예약발송 취소</a></li>
-						<li><a href="#">회원정보 수정</a></li>
-						<li><a href="#">정산담당자 정보입력</a></li>                                                        
+						<li><a href="b2clist.etc">B2C 등록</a></li>
+						<li><a href="spam.etc">스팸모니터링</a></li>
+						<li><a href="notice.etc">게시물 관리</a></li>                            
+						<li><a href="reservation.etc">예약발송 취소</a></li>
+						<li><a href="member.etc">회원정보 수정</a></li>
+						<li><a href="account.etc">정산담당자 정보입력</a></li>                                                        
 					</ul>
 				</li>
 			</ul>
