@@ -26,7 +26,6 @@ public class SalesIntegrationWebApplication extends SpringBootServletInitializer
         
         SpringApplication.run(SalesIntegrationWebApplication.class, args);
         
-		
     }
     
 

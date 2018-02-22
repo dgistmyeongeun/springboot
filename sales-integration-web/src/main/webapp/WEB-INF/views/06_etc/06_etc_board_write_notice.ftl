@@ -73,7 +73,7 @@
 							<!-- //게시판 에디터 자리 -->
 						</td>
 					</tr>
-					<tr>
+					<tr class='test'>
 						<th>최상위 노출</th>
 						<td colspan="5">
 							<label for="noticeCheck"><input type="checkbox" id="noticeCheck" name="noticeCheck"> 
@@ -94,4 +94,6 @@
 		<!-- //하단 버튼 -->
 	</div>
 	<!-- //contents -->
+	
+	
 </@page.base>

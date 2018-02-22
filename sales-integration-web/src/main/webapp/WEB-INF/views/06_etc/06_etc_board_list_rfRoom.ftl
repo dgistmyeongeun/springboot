@@ -35,7 +35,7 @@
 		
 		<!-- button -->
 		<div class="align_r mb_15">
-			<a href="" class="btn md btn_blue">등록</a>
+			<a href="write_rfRoom.etc" class="btn md btn_blue">등록</a>
 			<a href="" class="btn md btn_gray">삭제</a>
 		</div>
 		<!-- //button -->

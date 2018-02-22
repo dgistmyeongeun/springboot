@@ -4,4 +4,7 @@
     <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/menu.js"></script>
 	<script type="text/javascript" src="js/menu2.js"></script>
+	<script type="text/javascript" src="js/checkbox.js"></script>
+	<script type="text/javascript" src="js/rfRoomSelect.js"></script>
 </#macro>
+

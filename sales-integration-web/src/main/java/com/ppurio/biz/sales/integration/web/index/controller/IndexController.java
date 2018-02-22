@@ -30,9 +30,11 @@ public class IndexController {
     /**
      * @TODO redirect uri
      */
+    
+    
     @GetMapping("/index.do")
     String root() {
-        return "/etc/sidebar";
+        return "/etc/accountManager";
     }
     
     

@@ -102,6 +102,19 @@ public class EtcController {
    public String boardRfroom() {
 	   return "/06_etc/06_etc_board_list_rfRoom";
    }
+
+   //자료실 FAQ-등록(자료실)
+   @GetMapping(value="/write_rfRoom.etc")
+   public String boardRfroomWrite() {
+	   return "/06_etc/06_etc_board_write_rfRoom";
+   }
+   
+ //자료실 FAQ-등록(faq)
+   @GetMapping(value="/write_rfRoomFAQ.etc")
+   public String boardRfroomWrite_faq() {
+	   return "/06_etc/06_etc_board_write_faq";
+   }
+   
    
  //온라인상담
    @GetMapping(value="/online.etc")

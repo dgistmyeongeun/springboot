@@ -2,7 +2,7 @@
 <#macro base baseTitle='영업관리시스템' 
 	baseScript='/include/common-script.ftl' 
 	baseStyle='/include/common-style.ftl'
-	baseMenuTop='/layout/menutop.ftl'>
+	baseMenuTop='menutop.ftl'>
 	
 
 <!doctype html>

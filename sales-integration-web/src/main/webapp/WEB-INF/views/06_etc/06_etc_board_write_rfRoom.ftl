@@ -1,5 +1,4 @@
 <#import "../layout/sidebar_etc.ftl" as page>
-<#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 슬라이드바' />
 
 <@page.base pageTitle>
@@ -43,9 +42,9 @@
 					<tr>
 						<th>구분</th>
 						<td>
-							<select class="w150">
+							<select class="w150" id="rfR">
 								<option value="1">자료실</option>
-								<option value="1">FAQ</option>
+								<option value="2">FAQ</option>
 							</select>
 						</td>
 						<th>서비스</th>
