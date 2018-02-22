@@ -3,13 +3,11 @@ function rfchange() {
 	
 	var varTable = $(".rf option:selected").closest("table");
 	var varTableLastRow = varTable.find('.changeArea_m');
-	alert(varTableLastRow.attr('class'));
-	$("#changeArea_m").remove();
-	var newRow = varTable.find('tr:last');
 	
-	alert(type+":::"+ newRow.attr("class"));
+	//alert(type+":::"+ newRow.attr("class"));
 	
-	if(type="1"){
+	if(type="2"){
+		$("#changeArea_m").deleteRow(2);
 		varTable.append('<tbody id="changeArea_m">'+
 				'<tr>'+
 				'<th><b class="txt_c_red">*</b> 내용</th>'+
@@ -30,7 +28,8 @@ function rfchange() {
 			'</tbody>')
 	}
 	
-	if(type="2"){
+	if(type="1"){
+		$("#changeArea_m").remove();
 		varTable.append('<tbody id="changeArea_m"><tr>'+
 							'<th>최상위 노출</th>'+
 							'<td colspan="5"><input type="checkbox"></td>'+

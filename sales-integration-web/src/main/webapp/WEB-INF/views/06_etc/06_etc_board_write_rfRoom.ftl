@@ -75,7 +75,7 @@
 							<!-- //게시판 에디터 자리 -->
 						</td>
 					</tr>
-					<tr id="changeArea_m">
+					<tr>
 						<th>첨부파일</th>
 						<td colspan="5">
 							<input type="file" class="w300 mr_5">
