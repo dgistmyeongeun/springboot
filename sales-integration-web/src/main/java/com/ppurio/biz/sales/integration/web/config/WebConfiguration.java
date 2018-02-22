@@ -18,7 +18,7 @@ import com.ppurio.biz.sales.integration.web.interceptor.CommonInterceptor;
  * @author leesh04@daou.co.kr
  */
 @Configuration
-@EnableWebMvc
+//@EnableWebMvc
 public class WebConfiguration implements WebMvcConfigurer {
 
 	

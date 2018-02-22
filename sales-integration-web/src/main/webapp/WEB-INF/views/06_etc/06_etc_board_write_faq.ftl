@@ -43,9 +43,9 @@
 					<tr>
 						<th>구분</th>
 						<td>
-							<select class="w150">
+							<select class="w150 rf" onchange="rfchange()" >
 								<option value="1">자료실</option>
-								<option value="1">FAQ</option>
+								<option value="2" selected>FAQ</option>
 							</select>
 						</td>
 						<th>서비스</th>
@@ -67,7 +67,7 @@
 							<input type="text" class="w300">					
 						</td>
 					</tr>
-					<tr>
+					<tr class="test">
 						<th><b class="txt_c_red">*</b> 내용</th>
 						<td colspan="5">
 							<!-- 게시판 에디터 자리 -->
@@ -75,6 +75,7 @@
 							<!-- //게시판 에디터 자리 -->
 						</td>
 					</tr>
+					<tbody id="changeArea_m">
 					<tr>
 						<th>최상위 노출</th>
 						<td colspan="5"><input type="checkbox"></td>
@@ -83,6 +84,7 @@
 						<th>자주 묻는 질문</th>
 						<td colspan="5"><label for="noticeCheck"><input type="checkbox" id="noticeCheck" name="noticeCheck"> <span class="red">* 체크 시 자주 묻는 질문 리스트에 추가됩니다.</span></label></td>
 					</tr>
+					</tbody>
 				</tbody>				
 			</table>
 		<!-- //table -->

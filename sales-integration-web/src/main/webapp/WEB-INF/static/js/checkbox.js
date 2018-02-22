@@ -1,6 +1,6 @@
 $(document).ready(function() {
-$("#noticeCheck").click(function(){
-	if($(this).is(":checked")){
+	$("#noticeCheck").click(function(){
+		if($(this).is(":checked")){
 		
 		var varTable = $(this).closest("table");
 		var varTableLastRow = varTable.find('tr:last');
@@ -31,7 +31,5 @@ $("#noticeCheck").click(function(){
 	else{
 		$("#high").remove();
 	}
-})
-
-
+});
 });

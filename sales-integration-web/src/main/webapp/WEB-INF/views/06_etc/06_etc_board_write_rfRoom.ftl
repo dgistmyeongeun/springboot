@@ -42,9 +42,9 @@
 					<tr>
 						<th>구분</th>
 						<td>
-							<select class="w150" id="rfR">
-								<option value="1">자료실</option>
-								<option value="2">FAQ</option>
+							<select class="w150 rf" onchange="rfchange()">
+								<option value="1" class='tt'>자료실</option>
+								<option value="2" class='ttt'>FAQ</option>
 							</select>
 						</td>
 						<th>서비스</th>
@@ -60,12 +60,13 @@
 							</select>						
 						</td>
 					</tr>
-					<tr>
+					<tr class="test">
 						<th><b class="txt_c_red">*</b> 제목</th>
 						<td colspan="5">
 							<input type="text" class="w300">					
 						</td>
 					</tr>
+					<tbody class="changeArea_m">
 					<tr>
 						<th><b class="txt_c_red">*</b> 내용</th>
 						<td colspan="5">
@@ -74,7 +75,7 @@
 							<!-- //게시판 에디터 자리 -->
 						</td>
 					</tr>
-					<tr>
+					<tr id="changeArea_m">
 						<th>첨부파일</th>
 						<td colspan="5">
 							<input type="file" class="w300 mr_5">
@@ -84,6 +85,7 @@
 						<th>최상위 노출</th>
 						<td colspan="5"><input type="checkbox"></td>
 					</tr>
+					</tbody>
 				</tbody>				
 			</table>
 		<!-- //table -->
