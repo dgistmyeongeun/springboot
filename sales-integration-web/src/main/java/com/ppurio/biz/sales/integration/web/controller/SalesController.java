@@ -36,5 +36,20 @@ public class SalesController {
    public String pawn() {
 	   return "/01_sales/01_sales_pawn";
    }
+   
+   @GetMapping(value="/performanceTeam.sales")
+   public String performanceTeam() {
+	   return "/01_sales/01_sales_performanceAdmin_team";
+   }
+   
+   @GetMapping(value="/performanceMonth.sales")
+   public String performanceMonth() {
+	   return "/01_sales/01_sales_performanceAdmin_month";
+   }
+   
+   @GetMapping(value="/referenceRoom.sales")
+   public String referenceRoom() {
+	   return "/01_sales/01_sales_referenceRoom";
+   }
 
 }

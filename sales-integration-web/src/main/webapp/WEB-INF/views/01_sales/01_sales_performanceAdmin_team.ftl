@@ -58,14 +58,14 @@
 				<div class="title">
 					<em></em>      
 					<h4 class="align_l">실적 현황</h4>
-					<blockquote class="align_r"><a href=""  class="btn_md_blue">목표 입력/수정</a></blockquote>
+					<blockquote class="align_r"><a href="performanceMonth.sales"  class="btn_md_blue">목표 입력/수정</a></blockquote>
 				</div>				
 			</div>
 			<!-- //실적 현황 -->
 			
 			<!-- @그래프자리 -->
 			<div class="cont_l">
-				<img src="../images/@graph1.gif" alt="그래프1">
+				<img src="images/@graph1.gif" alt="그래프1">
 			</div>
 			<!-- //@그래프자리 --> 
 			
@@ -116,7 +116,7 @@
 			<h5>&lt 매출 &gt</h5>
 			<!-- @그래프자리 -->
 			<div>
-				<img src="../images/@graph2_1.gif" alt="그래프2">
+				<img src="images/@graph2_1.gif" alt="그래프2">
 			</div>
 			<!-- //@그래프자리 -->
 			
@@ -194,7 +194,7 @@
 			<h5>&lt GP &gt</h5>
 			<!-- @그래프자리 -->
 			<div>
-				<img src="../images/@graph2_1.gif" alt="그래프2">
+				<img src="images/@graph2_1.gif" alt="그래프2">
 			</div>
 			<!-- //@그래프자리 -->
 			
@@ -417,7 +417,7 @@
    
    		<!-- @그래프자리 -->
    		<div class="align_c">
-   			<img src="../images/@graph1.gif" alt="그래프1">
+   			<img src="images/@graph1.gif" alt="그래프1">
    		</div>
    		<!-- //@그래프자리 -->
     
@@ -459,7 +459,7 @@
 	    
 	  	<!-- @그래프자리 -->	    	
 	    <div class="align_c">
-	    	<img src="../images/@graph3.gif" alt="그래프3">
+	    	<img src="images/@graph3.gif" alt="그래프3">
 	    </div>
 	    <!-- //@그래프자리 -->
 

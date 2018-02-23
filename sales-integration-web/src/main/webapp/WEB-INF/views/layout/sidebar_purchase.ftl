@@ -21,13 +21,13 @@
 	<!-- sidebar -->
 	<div class="sidebar">
 		<ul class="nav">
-			<li class="menu"><a href="#">매출조회</a></li>
-			<li class="menu"><a href="#">선수수익관리</a></li>
-			<li class="menu"><a href="#">영업대행사 매출</a></li>
+			<li class="menu"><a href="reference.purchase">매출조회</a></li>
+			<li class="menu"><a href="revenue.purchase">선수수익관리</a></li>
+			<li class="menu"><a href="agency.purchase">영업대행사 매출</a></li>
 			<li class="menu"><a href="#">매입관리<i></i></a>
 				<ul class="nav_second">
-					<li><a href="#">예상매입조회</a></li>
-					<li><a href="#">매입대사</a></li>
+					<li><a href="purchaseSearch.purchase">예상매입조회</a></li>
+					<li><a href="purchaseList.purchase">매입대사</a></li>
 				</ul>
 			</li>
 		</ul>

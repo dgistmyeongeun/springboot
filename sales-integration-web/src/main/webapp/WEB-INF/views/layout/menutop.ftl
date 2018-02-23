@@ -8,11 +8,11 @@
 				</a>
 			</h1>
 			<ul class="menu m6">
-				<li><a href="pawn.sales" class="nav_second">영업관리</a>                    
+				<li><a href="#" class="nav_second">영업관리</a>                    
 					<ul class="sub">
 						<li></li>
-						<li><a href="#">실적관리</a></li>
-						<li><a href="#">담보관리</a></li>
+						<li><a href="performanceTeam.sales">실적관리</a></li>
+						<li><a href="pawn.sales">담보관리</a></li>
 					</ul>
 				</li>
 				<li><a href="#">고객관리</a>
@@ -39,13 +39,13 @@
 						<li><a href="#">자동이체</a></li>
 					</ul>
 				</li>
-				<li><a href="agency.purchase">매출/매입관리</a>
+				<li><a href="reference.purchase">매출/매입관리</a>
 					<ul class="sub">
 						<li></li>
-						<li><a href="agency.purchase">매출조회</a></li>
-						<li><a href="#">선수수익관리</a></li>
-						<li><a href="#">영업대행사 매출</a></li>
-						<li><a href="#">매입관리</a></li>
+						<li><a href="reference.purchase">매출조회</a></li>
+						<li><a href="revenue.purchase">선수수익관리</a></li>
+						<li><a href="agency.purchase">영업대행사 매출</a></li>
+						<li><a href="purchaseSearch.purchase">매입관리</a></li>
 					</ul>
 				</li>
 				<li><a href="account.statistic">통계</a>

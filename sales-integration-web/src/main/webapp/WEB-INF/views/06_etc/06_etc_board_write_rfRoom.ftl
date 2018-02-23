@@ -38,7 +38,7 @@
 					<col style="width:10.6%">
 					<col style="width:22.6%">
 				</colgroup>
-				<tbody>
+				 <tbody> 
 					<tr>
 						<th>구분</th>
 						<td>
@@ -66,7 +66,6 @@
 							<input type="text" class="w300">					
 						</td>
 					</tr>
-					<tbody class="changeArea_m">
 					<tr>
 						<th><b class="txt_c_red">*</b> 내용</th>
 						<td colspan="5">
@@ -75,18 +74,18 @@
 							<!-- //게시판 에디터 자리 -->
 						</td>
 					</tr>
-					<tr>
+					<tr class="changeArea_m">
 						<th>첨부파일</th>
 						<td colspan="5">
 							<input type="file" class="w300 mr_5">
 						</td>
 					</tr>
-					<tr>
+					<tr class="changeArea_m">
 						<th>최상위 노출</th>
 						<td colspan="5"><input type="checkbox"></td>
 					</tr>
-					</tbody>
-				</tbody>				
+					
+				</tbody> 			
 			</table>
 		<!-- //table -->
 		

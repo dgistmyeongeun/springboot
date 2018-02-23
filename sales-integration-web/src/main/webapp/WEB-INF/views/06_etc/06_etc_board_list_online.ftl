@@ -125,7 +125,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>로그인</td>
-						<td><a href="" class="a_be blue">문자 발송은 어떻게 하나요?</a></td>
+						<td><a href="onlineWrite.etc?no=130&member=daou" class="a_be blue">문자 발송은 어떻게 하나요?</a></td>
 						<td>2017.09.10</td>
 						<td></td>
 						<td>미처리</td>
@@ -138,7 +138,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">알림톡 발송 가이드</a></td>
+						<td><a href="onlineWrite.etc?no=129&member=daou" class="a_be blue">알림톡 발송 가이드</a></td>
 						<td>2017.09.10</td>
 						<td>윤수진</td>
 						<td>미처리</td>
@@ -151,7 +151,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">유핏 모듈 v5.0</a></td>
+						<td><a href="onlineWrite.etc?no=128&member=daou" class="a_be blue">유핏 모듈 v5.0</a></td>
 						<td>2017.09.10</td>
 						<td>김현진</td>
 						<td>미처리</td>
@@ -164,7 +164,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">알림톡 발송 가이드</a></td>
+						<td><a href="onlineWrite.etc?no=129&member=daou" class="a_be blue">알림톡 발송 가이드</a></td>
 						<td>2017.09.10</td>
 						<td>윤수진</td>
 						<td>미처리</td>
@@ -177,33 +177,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">유핏 모듈 v5.0</a></td>
-						<td>2017.09.10</td>
-						<td>김현진</td>
-						<td>미처리</td>
-					</tr>																		
-					<tr>
-						<td>129</td>
-						<td>MSG2</td>
-						<td>비즈뿌리오</td>
-						<td>daou</td>
-						<td>다우기술</td>
-						<td>윤수지</td>
-						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">알림톡 발송 가이드</a></td>
-						<td>2017.09.10</td>
-						<td>윤수진</td>
-						<td>미처리</td>
-					</tr>
-					<tr>
-						<td>128</td>
-						<td>MSG2</td>
-						<td>비즈뿌리오</td>
-						<td>daou</td>
-						<td>다우기술</td>
-						<td>윤수지</td>
-						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">유핏 모듈 v5.0</a></td>
+						<td><a href="onlineWrite.etc?no=128" class="a_be blue">유핏 모듈 v5.0</a></td>
 						<td>2017.09.10</td>
 						<td>김현진</td>
 						<td>미처리</td>
@@ -216,7 +190,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">알림톡 발송 가이드</a></td>
+						<td><a href="onlineWrite.etc?no=129&member=daou" class="a_be blue">알림톡 발송 가이드</a></td>
 						<td>2017.09.10</td>
 						<td>윤수진</td>
 						<td>미처리</td>
@@ -229,7 +203,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">유핏 모듈 v5.0</a></td>
+						<td><a href="onlineWrite.etc?no=128&member=daou" class="a_be blue">유핏 모듈 v5.0</a></td>
 						<td>2017.09.10</td>
 						<td>김현진</td>
 						<td>미처리</td>
@@ -242,7 +216,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">알림톡 발송 가이드</a></td>
+						<td><a href="onlineWrite.etc?no=129&member=daou" class="a_be blue">알림톡 발송 가이드</a></td>
 						<td>2017.09.10</td>
 						<td>윤수진</td>
 						<td>미처리</td>
@@ -255,7 +229,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">유핏 모듈 v5.0</a></td>
+						<td><a href="onlineWrite.etc?no=128&member=daou" class="a_be blue">유핏 모듈 v5.0</a></td>
 						<td>2017.09.10</td>
 						<td>김현진</td>
 						<td>미처리</td>
@@ -268,7 +242,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">알림톡 발송 가이드</a></td>
+						<td><a href="onlineWrite.etc?no=129&member=daou" class="a_be blue">알림톡 발송 가이드</a></td>
 						<td>2017.09.10</td>
 						<td>윤수진</td>
 						<td>미처리</td>
@@ -281,7 +255,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">유핏 모듈 v5.0</a></td>
+						<td><a href="onlineWrite.etc?no=128&member=daou" class="a_be blue">유핏 모듈 v5.0</a></td>
 						<td>2017.09.10</td>
 						<td>김현진</td>
 						<td>미처리</td>
@@ -294,7 +268,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">알림톡 발송 가이드</a></td>
+						<td><a href="onlineWrite.etc?no=129&member=daou" class="a_be blue">알림톡 발송 가이드</a></td>
 						<td>2017.09.10</td>
 						<td>윤수진</td>
 						<td>미처리</td>
@@ -307,7 +281,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">유핏 모듈 v5.0</a></td>
+						<td><a href="onlineWrite.etc?no=128&member=daou" class="a_be blue">유핏 모듈 v5.0</a></td>
 						<td>2017.09.10</td>
 						<td>김현진</td>
 						<td>미처리</td>
@@ -320,7 +294,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">알림톡 발송 가이드</a></td>
+						<td><a href="onlineWrite.etc?no=129&member=daou" class="a_be blue">알림톡 발송 가이드</a></td>
 						<td>2017.09.10</td>
 						<td>윤수진</td>
 						<td>미처리</td>
@@ -333,7 +307,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">유핏 모듈 v5.0</a></td>
+						<td><a href="onlineWrite.etc?no=128&member=daou" class="a_be blue">유핏 모듈 v5.0</a></td>
 						<td>2017.09.10</td>
 						<td>김현진</td>
 						<td>미처리</td>
@@ -346,7 +320,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">알림톡 발송 가이드</a></td>
+						<td><a href="onlineWrite.etc?no=129&member=daou" class="a_be blue">알림톡 발송 가이드</a></td>
 						<td>2017.09.10</td>
 						<td>윤수진</td>
 						<td>미처리</td>
@@ -359,7 +333,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">유핏 모듈 v5.0</a></td>
+						<td><a href="onlineWrite.etc?no=128&member=daou" class="a_be blue">유핏 모듈 v5.0</a></td>
 						<td>2017.09.10</td>
 						<td>김현진</td>
 						<td>미처리</td>
@@ -372,7 +346,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">알림톡 발송 가이드</a></td>
+						<td><a href="onlineWrite.etc?no=129&member=daou" class="a_be blue">알림톡 발송 가이드</a></td>
 						<td>2017.09.10</td>
 						<td>윤수진</td>
 						<td>미처리</td>
@@ -385,7 +359,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">유핏 모듈 v5.0</a></td>
+						<td><a href="onlineWrite.etc?no=128&member=daou" class="a_be blue">유핏 모듈 v5.0</a></td>
 						<td>2017.09.10</td>
 						<td>김현진</td>
 						<td>미처리</td>
@@ -398,7 +372,7 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">알림톡 발송 가이드</a></td>
+						<td><a href="onlineWrite.etc?no=129&member=daou" class="a_be blue">알림톡 발송 가이드</a></td>
 						<td>2017.09.10</td>
 						<td>윤수진</td>
 						<td>미처리</td>
@@ -411,7 +385,33 @@
 						<td>다우기술</td>
 						<td>윤수지</td>
 						<td>메세지발송</td>
-						<td><a href="" class="a_be blue">유핏 모듈 v5.0</a></td>
+						<td><a href="onlineWrite.etc?no=128&member=daou" class="a_be blue">유핏 모듈 v5.0</a></td>
+						<td>2017.09.10</td>
+						<td>김현진</td>
+						<td>미처리</td>
+					</tr>																		
+					<tr>
+						<td>129</td>
+						<td>MSG2</td>
+						<td>비즈뿌리오</td>
+						<td>daou</td>
+						<td>다우기술</td>
+						<td>윤수지</td>
+						<td>메세지발송</td>
+						<td><a href="onlineWrite.etc?no=129&member=daou" class="a_be blue">알림톡 발송 가이드</a></td>
+						<td>2017.09.10</td>
+						<td>윤수진</td>
+						<td>미처리</td>
+					</tr>
+					<tr>
+						<td>128</td>
+						<td>MSG2</td>
+						<td>비즈뿌리오</td>
+						<td>daou</td>
+						<td>다우기술</td>
+						<td>윤수지</td>
+						<td>메세지발송</td>
+						<td><a href="onlineWrite.etc?no=128&member=daou" class="a_be blue">유핏 모듈 v5.0</a></td>
 						<td>2017.09.10</td>
 						<td>김현진</td>
 						<td>미처리</td>

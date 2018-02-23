@@ -51,7 +51,7 @@
 			<tbody>
 				<tr>
 					<td>17.03.03 10:45</td>
-					<td>ciosk</td>
+					<td>${(partID)!"defaulID"}</td>
 					<td>수지닷컴</td>
 					<td>MSG2</td>
 					<td>윤수지</td>

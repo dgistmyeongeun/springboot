@@ -5,6 +5,6 @@
 	<script type="text/javascript" src="js/menu.js"></script>
 	<script type="text/javascript" src="js/menu2.js"></script>
 	<script type="text/javascript" src="js/checkbox.js"></script>
-	<script type="text/javascript" src="js/rfRoomSelect.js"></script>
+	<script type="text/javascript" src="js/rfRoomSelect.js?v=2"></script>
 </#macro>
 

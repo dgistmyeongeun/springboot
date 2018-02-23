@@ -52,8 +52,8 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>비즈뿌리오</td>
-					<td>daou</td>
+					<td>${(no)!"defaul text"}</td>
+					<td>${(member)!"defaul text"}</td>
 					<td>다우기술</td>
 					<td>2017.01.22</td>
 					<td>미처리</td>

@@ -36,6 +36,7 @@
 					<li><a href="notice.etc">공지/팝업</a></li>
 					<li><a href="rfroom.etc">자료실/FAQ</a></li>
 					<li><a href="online.etc">온라인상담</a></li>
+					<li><a href="banner.etc">베너</a></li>
 				</ul>
 			</li>
 			<li class="menu"><a href="reservation.etc">예약발송 취소</a></li>

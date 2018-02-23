@@ -8,16 +8,23 @@ package com.ppurio.biz.sales.integration.web.controller;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.Map;
+
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.ppurio.biz.sales.integration.web.MemberVO;
 
@@ -68,20 +75,24 @@ public class EtcController {
 	   return "/06_etc/06_etc_reservationsentCancel";
    }
    //예약발송취소-기간조회
-   @GetMapping(value="/reservationpart.etc")
-   public String reservationCanncelP() {
-	   return "/06_etc/06_etc_reservationsentCancel_partdel";
+   @GetMapping(value="/reservationPart.etc")
+   public ModelAndView reservationCanncelP(HttpServletRequest request) {
+	   String id = request.getParameter("idInput");
+	   //DB에서 예약발송 list에 해당 id와 날짜에 관한 정보를 가져옴.
+	   Map<String, Object> model = new HashMap<String, Object>();
+	   model.put("partID", id);
+	   return new ModelAndView("06_etc/06_etc_reservationsentCancel_partdel", model);
    }
    
- //스팸모니터링
+   //스팸모니터링
    @GetMapping(value="/spam.etc")
    public String spam() {
 	   return "/06_etc/06_etc_spamMonitoring";
    }
    
- //스팸모니터링-히스토리
+   //스팸모니터링-히스토리
    @GetMapping(value="/spamreport.etc")
-   public String spamReport() {
+   public String spamReport(HttpServletRequest request) {
 	   return "/06_etc/06_etc_spamMonitoring_reportHistory";
    }
    
@@ -116,10 +127,26 @@ public class EtcController {
    }
    
    
- //온라인상담
+   //온라인상담
    @GetMapping(value="/online.etc")
    public String online() {
 	   return "/06_etc/06_etc_board_list_online";
+   }
+   //온라인상담-write
+   @GetMapping(value="/onlineWrite.etc")
+   public ModelAndView onlineWrite(String no, String member) {
+	   //DB연동시 --> no: 온라인게시판 정보가져와서 게시판 객체로 전달, member: 고객정보 가져와 고객객체로 전달.
+	   Map<String, String> model = new HashMap<String, String>();
+	   model.put("no", no);
+	   model.put("member", member);
+	   
+	   return new ModelAndView("06_etc/06_etc_board_write_online", model);
+   }
+   
+   //베너:추가
+   @GetMapping(value="/banner.etc")
+   public String banner() {
+	   return "/06_etc/06_etc_board_list_banner";
    }
 
 }

@@ -25,10 +25,11 @@
 		<!-- //message -->
 		
 		<!-- 검색 -->
+		<form action="reservationPart.etc" id="frm_m" method="get">
 		<div class="box_grey box_search">
 			<p class="align_c">
 				<label class="bul" for="idInput">ID</label>
-				<input class="mr_15" id="idInput" type="text" placeholder="ID 입력">
+				<input class="mr_15" id="idInput" name="idInput" type="text" placeholder="ID 입력">
 				<label class="bul">예약 발송 시간</label>
 				<select class="w80">
 					 <option value="1">YYYY</option>
@@ -45,9 +46,10 @@
 				<select class="w60">
 					<option value="1">MM</option>
 				</select> 분
-				<a class="btn_sm_sch_black r3 ml_10" href="#">검색</a>				
+				<button class="btn_sm_sch_black r3 ml_10" >검색</button>				
 			</p>
-		</div>		
+		</div>	
+		</form>	
 		<!-- // 검색 -->
 		
 		<!-- button -->

@@ -26,7 +26,7 @@
                         <option value="">검색조건 선택</option>
 					</select>
 					<input type="text" class="w150" placeholder="검색 내용 입력">
-					<a href="" class="btn_sm_sch_black r3">검색</a>
+					<a href="spamreport.etc" class="btn_sm_sch_black r3">검색</a>
 				</p>
 			</div>			
 		</div>
