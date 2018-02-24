@@ -59,7 +59,7 @@
 					<input id="input3" type="text" placeholder="검색 내용 입력">
 				</p>
 			</div>
-			<div class="btn_box"><a href="#" class="btn_sch_black r3">조회</a></div>
+			<div class="btn_box"><a href="#" class="btn_black r3 md">조회</a></div><#--btn_sch_black r3-->
 		</div>
 		<!-- //조회 -->
 		
