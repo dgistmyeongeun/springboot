@@ -1,4 +1,7 @@
 	<!-- menuTop -->
+	<style type="text/css">
+	.f15{font-size:15px;}
+	</style>
     <div class="navbar_aa">
 		<div class="nav">
 			<h1>

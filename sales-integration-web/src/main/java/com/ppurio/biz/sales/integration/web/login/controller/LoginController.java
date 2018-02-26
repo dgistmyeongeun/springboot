@@ -45,7 +45,7 @@ public class LoginController {
 
     @GetMapping("/login.do")
     String login(){
-        return "/login/form";
+        return "/login/00_login";
     }
     
     @PostMapping("/loginProc.do")

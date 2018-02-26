@@ -10,7 +10,7 @@
     	<div class="title_b">
     		<em></em>
     		<h2>온라인 상담</h2>
-			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="">기타</a> > <a href="">게시물 관리</a> > <a href="">온라인 상담</a></blockquote>
+			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="asp.etc">기타</a> > <a href="">게시물 관리</a> > <a href="">온라인 상담</a></blockquote>
 		</div>
 		<!-- //title -->
 				

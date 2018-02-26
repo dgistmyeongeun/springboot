@@ -1,7 +1,5 @@
 <#import "../layout/sidebar_etc.ftl" as page>
-<#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 슬라이드바' />
-
 <@page.base pageTitle>
    
     <!-- contents -->
@@ -10,7 +8,7 @@
     	<div class="title_b">
     		<em></em>
     		<h2>ASP 관리</h2>
-			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="">기타</a> > <a href="">ASP 관리</a></blockquote>
+			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="asp.etc">기타</a> > <a href="asp.etc">ASP 관리</a></blockquote>
 		</div>
 		<!-- //title -->
 		
@@ -29,7 +27,7 @@
 					<th>ZONE</th>
 					<th>기간</th>
 					<th>기준</th>
-					<th rowspan="2"><a href="#" class="btn_sch_black">검색</a></th>
+					<th rowspan="2"><a href="#" class="btn_black md r3">검색</a></th><!-- btn_sch_black -->
 				</tr>
 				<tr>
 					<td>
@@ -43,11 +41,11 @@
 						</select>						
 					</td>
 					<td>
-						<input type="text" class="w100"><button class="calendar"></button>~ <input type="text" class="w100"><button class="calendar"></button>
+						<input type="text" class="w100" id = "fromDate"><button class="calendar"></button>~ <input type="text" class="w100" id="toDate"><button class="calendar"></button>
 					</td>
 					<td>
-						<label for="numberRadios"><input type="radio" id="numberRadios" name="numberRadios" checked="" class="mr_3"> 건수</label>
-						<label for="salesRadios"><input type="radio" id="salesRadios" name="salesRadios" class="ml_20 mr_3"> 매출</label>
+						<label for="numberRadios"><input type="radio" id="numberRadios" name="numbersalesRadios" checked="" class="mr_3" onclick="showNumber()"> 건수</label>
+						<label for="salesRadios"><input type="radio" id="salesRadios" name="numbersalesRadios" class="ml_20 mr_3" onclick="showSales()"> 매출</label>
 					</td>
 				</tr>
 			</thead>
@@ -56,6 +54,7 @@
 		
 		<!-- 건수 선택 시 list table -->
 		<!-- list table 1 -->
+		<div id="numberRadiosDiv">
 		<div class="scroll_y clr">
 			<table class="tb_list_b p200">
 				<colgroup>
@@ -355,11 +354,13 @@
 				</tbody>
 			</table>
 		</div>
+		</div>
 		<!-- list table 2 -->
 		<!-- //건수 선택 시 list table -->
 		
 		<!-- 매출 선택 시 list table -->
 		<!-- list table 1 -->
+		<div id="salesRadiosDiv" style="display:none">
 		<div class="scroll_y clr mt_15">
 			<table class="tb_list_b p200">
 				<colgroup>
@@ -581,8 +582,24 @@
 				</tbody>
 			</table>
 		</div>
+		</div>
 		<!-- //list table 2 -->
 		<!-- //매출 선택 시 list table -->
 	</div>
 	<!-- //contents -->
+	<script type="text/javascript">
+	function showSales(){
+		var numberR = document.getElementById("numberRadiosDiv");
+		var salesR = document.getElementById("salesRadiosDiv");
+		numberR.style.display = 'none';
+		salesR.style.display = '';
+	}
+	function showNumber(){
+		var numberR = document.getElementById("numberRadiosDiv");
+		var salesR = document.getElementById("salesRadiosDiv");
+		numberR.style.display = '';
+		salesR.style.display = 'none';
+	}
+
+	</script>
 </@page.base>

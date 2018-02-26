@@ -10,7 +10,7 @@
     	<div class="title_b">
     		<em></em>
     		<h2>공지/팝업</h2>
-			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="">기타</a> > <a href="">게시물 관리</a> > <a href="">공지팝업</a></blockquote>
+			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="asp.etc">기타</a> > <a href="">게시물 관리</a> > <a href="">공지팝업</a></blockquote>
 		</div>
 		<!-- //title -->
 				

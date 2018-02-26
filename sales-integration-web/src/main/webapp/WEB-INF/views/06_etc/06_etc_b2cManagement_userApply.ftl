@@ -9,7 +9,7 @@
     	<div class="title_b">
     		<em></em>
     		<h2>B2C 관리</h2>
-			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="">기타</a> > <a href="">B2C 관리</a> > <a href="">사용자 등록</a></blockquote>
+			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="asp.etc">기타</a> > <a href="">B2C 관리</a> > <a href="">사용자 등록</a></blockquote>
 		</div>
 		<!-- //title -->
 		
