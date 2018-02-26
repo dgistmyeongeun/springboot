@@ -59,7 +59,11 @@
 					<input id="input3" type="text" placeholder="검색 내용 입력">
 				</p>
 			</div>
+<<<<<<< HEAD
 			<div class="btn_box"><a href="referenceResult.purchase" class="btn_black md r3">조회</a></div><!-- btn_sch_black r3 -->
+=======
+			<div class="btn_box"><a href="#" class="btn_black r3 md">조회</a></div><#--btn_sch_black r3-->
+>>>>>>> refs/remotes/origin/master
 		</div>
 		<!-- //조회 -->
 		
