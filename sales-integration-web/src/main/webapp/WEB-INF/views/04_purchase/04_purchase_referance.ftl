@@ -9,7 +9,7 @@
     	<div class="title_b">
     		<em></em>
     		<h2>매출조회</h2>
-			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="">매출/매입관리</a> > <a href="">매출조회</a></blockquote>
+			<blockquote class="txt_bul_bar" ><a href="">홈</a> > <a href="">매출/매입관리</a> > <a href="">매출조회</a></blockquote>
 		</div>
 		<!-- //title -->
 		
@@ -54,17 +54,18 @@
 					<label for="input1" class="bul">고객사명</label>
 					<input id="input1" type="text" placeholder="검색 내용 입력" class="mr_15">
 					<label for="input2" class="bul">사업자번호</label>
-					<input id="input2" type="text" placeholder="검색 내용 입력" class="mr_15">
+					<input id="input2" type="text" placeholder="검색 내용 입력" class="mr_15 bizSelect">
 					<label for="input3" class="bul">ID</label>
 					<input id="input3" type="text" placeholder="검색 내용 입력">
 				</p>
 			</div>
-			<div class="btn_box"><a href="#" class="btn_sch_black r3">조회</a></div>
+			<div class="btn_box"><a href="referenceResult.purchase" class="btn_black md r3">조회</a></div><!-- btn_sch_black r3 -->
 		</div>
 		<!-- //조회 -->
 		
 		<!-- 서비스/팀/담당자/계산서발행여부 등 선택 -->
 		<div class="mt_15 mb_15">
+		<form action="prePost.purchase">
 			<p class="f_l">
 				<label for="serviceSelect" class="mr_15">서비스
 					<select class="w100" name="serviceSelect" id="serviceSelect">
@@ -89,8 +90,9 @@
 			</p>
 			<div class="align_r">
 				<a href="" class="btn md btn_green mr_3">다운로드</a>
-				<a href="" class="btn md btn_skyBlue">상세보기</a>
+				<a href="" class="btn md btn_skyBlue">상세보기</a> <!-- 해당 정보가 선불인지 후불인지에 따라 mapping -->
 			</div>
+		</form>
 		</div>
 		<!-- //서비스/팀/담당자/계산서발행여부 등 선택 -->
 		

@@ -1,125 +1,8 @@
-<!doctype html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<title>영업관리시스템_고객관리</title>
-<link rel="stylesheet" type="text/css" href="../css/sales.css" />
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<#import "../layout/sidebar_statistics.ftl" as page>
+<#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
+<#assign pageTitle='영업관리시스템 - 슬라이드바' />
 
-<script>
-//menu left
-$(document).ready(function(){
-    $(".menu>a").click(function(){
-        var submenu = $(this).next("ul"); 
-            if( submenu.is(":visible")){
-            submenu.slideUp();
-            }else{
-            submenu.slideDown();
-        }
-    });
-});
-    
-//menu top
-$(function(){      
-  $(".menu li").hover(function(){
-    $('ul:first',this).show();
-  }, function(){
-    $('ul:first',this).hide();
-  });
-});
-</script>
-
-</head>
-
-<body>
-	<!-- menuTop -->
-    <div class="navbar_aa">
-		<div class="nav">
-			<h1>
-				<a href="#">
-					<img src="../images/logo_bizppurio.png" alt="비즈뿌리오로고">
-					<span class="f15">영업관리시스템</span>
-				</a>
-			</h1>
-			<ul class="menu m6">
-				<li><a href="#" class="nav_second">영업관리</a>                    
-					<ul class="sub">
-						<li></li>
-						<li><a href="#">실적관리</a></li>
-						<li><a href="#">담보관리</a></li>
-					</ul>
-				</li>
-				<li><a href="#">고객관리</a>
-					 <ul class="sub">
-						<li></li>
-						<li><a href="#">회원리스트</a></li>
-						<li><a href="#">승인 전 회원 리스트</a></li>
-						<li><a href="#">해지고객 리스트</a></li>
-						<li><a href="#">여신 관리</a></li>
-						<li><a href="#">발신번호 관리</a></li>
-						<li><a href="#">카카오톡 비즈메시지</a></li>
-						<li><a href="#">수동 입출금</a></li>
-						<li><a href="#">매입처 관리</a></li>
-					</ul>
-				</li>
-				<li><a href="#">정산관리</a>
-					<ul class="sub">
-						<li></li>
-						<li><a href="#">정산정보설정</a></li>
-						<li><a href="#">선불</a></li>
-						<li><a href="#">후불</a></li>
-						<li><a href="#">영업대행사</a></li>
-						<li><a href="#">환불</a></li>
-						<li><a href="#">자동이체</a></li>
-					</ul>
-				</li>
-				<li><a href="#">매출/매입관리</a>
-					<ul class="sub">
-						<li></li>
-						<li><a href="#">매출조회</a></li>
-						<li><a href="#">선수수익관리</a></li>
-						<li><a href="#">영업대행사 매출</a></li>
-						<li><a href="#">매입관리</a></li>
-					</ul>
-				</li>
-				<li><a href="#">통계</a>
-					<ul class="sub">
-						<li></li>
-						<li><a href="#">계정별 발송통계</a></li>
-						<li><a href="#">라인별 발송현황</a></li>
-						<li><a href="#">발송추이</a></li>
-						<li><a href="#">발송내역 조회</a></li>                            
-					</ul>
-				</li>
-				<li><a href="#">기타</a>
-					<ul class="sub">
-						<li></li>
-						<li><a href="#">ASP 관리</a></li>
-						<li><a href="#">B2C 등록</a></li>
-						<li><a href="#">스팸모니터링</a></li>
-						<li><a href="#">게시물 관리</a></li>                            
-						<li><a href="#">예약발송 취소</a></li>
-						<li><a href="#">회원정보 수정</a></li>
-						<li><a href="#">정산담당자 정보입력</a></li>                                                        
-					</ul>
-				</li>
-			</ul>
-			<div class="btn_box"><!--<a href="#" class="pw mr_3">비밀번호</a>--><a href="#" class="logout">로그아웃</a></div>
-		</div>
-    </div>
-	<!-- //menuTop -->
-	
-	<!-- sidebar -->
-	<div class="sidebar">
-		<ul class="nav">
-			<li class="menu"><a href="#">계정별 발송통계</a></li>
-			<li class="menu"><a href="#">라인별 발송현황</a></li>
-			<li class="menu"><a href="#">발송 추이</a></li>
-			<li class="menu"><a href="#">발송 내역 조회</a></li>
-		</ul>
-	</div> 
-	<!-- //sidebar -->
-   
+<@page.base pageTitle>
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
@@ -131,14 +14,15 @@ $(function(){
 		<!-- //title -->
 		
 		<!-- tab -->
-		<ul class="tab_d">
-			<li><a class="active">월별</a></li>
-			<li><a>일별</a></li>
-			<li><a>증감 TOP 10 업체</a></li>
+		<ul class="tab_d nav nav-tabs">
+			<li><a class="active" data-toggle="tab" href="#tapMonth">월별</a></li>
+			<li><a id="moveDay" data-toggle="tab" href="#tapDay">일별</a></li>
+			<li><a data-toggle="tab" href="#tapTop10">증감 TOP 10 업체</a></li>
 		</ul>		
 		<!-- //tab -->	
-		
+		<div class="tab-content">
 		<!-- tab_월별 -->
+		<div id="tapMonth" class="tab-pane active">
 		<!-- message -->
 		<div class="box_b3 mb_15">
 			<ul class="txt_info">
@@ -259,7 +143,7 @@ $(function(){
 						<td>9,800,000</td>
 					</tr>
 					<tr>
-						<td><a href="a_be">1월</a></td>
+						<td><a href="#" onclick="dayWatch(1)">1월</a></td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
@@ -273,7 +157,7 @@ $(function(){
 						<td>1,000,000</td>
 					</tr>
 					<tr>
-						<td>2월</td>
+						<td><a href="#" onclick="dayWatch(2)">2월</a></td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
@@ -287,7 +171,7 @@ $(function(){
 						<td>1,000,000</td>
 					</tr>
 					<tr>
-						<td>3월</td>
+						<td><a href="#" onclick="dayWatch(3)">3월</a></td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
@@ -301,7 +185,7 @@ $(function(){
 						<td>1,000,000</td>
 					</tr>
 					<tr>
-						<td>4월</td>
+						<td><a href="#" onclick="dayWatch(4)">4월</a></td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
@@ -315,7 +199,7 @@ $(function(){
 						<td>1,000,000</td>
 					</tr>
 					<tr>
-						<td>5월</td>
+						<td><a href="#" onclick="dayWatch(5)">5월</a></td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
@@ -329,7 +213,7 @@ $(function(){
 						<td>1,000,000</td>
 					</tr>
 					<tr>
-						<td>6월</td>
+						<td><a href="#" onclick="dayWatch(6)">6월</a></td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
@@ -343,7 +227,7 @@ $(function(){
 						<td>1,000,000</td>
 					</tr>
 					<tr>
-						<td>7월</td>
+						<td><a href="#" onclick="dayWatch(7)">7월</a></td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
@@ -357,7 +241,7 @@ $(function(){
 						<td>1,000,000</td>
 					</tr>
 					<tr>
-						<td>8월</td>
+						<td><a href="#" onclick="dayWatch(8)">8월</a></td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
@@ -371,7 +255,7 @@ $(function(){
 						<td>1,000,000</td>
 					</tr>
 					<tr>
-						<td>9월</td>
+						<td><a href="#" onclick="dayWatch(9)">9월</a></td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
@@ -385,7 +269,7 @@ $(function(){
 						<td>1,000,000</td>
 					</tr>
 					<tr>
-						<td>10월</td>
+						<td><a href="#" onclick="dayWatch(10)">10월</a></td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
@@ -399,7 +283,7 @@ $(function(){
 						<td>1,000,000</td>
 					</tr>
 					<tr>
-						<td>11월</td>
+						<td><a href="#" onclick="dayWatch(11)">11월</a></td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
@@ -413,7 +297,7 @@ $(function(){
 						<td>1,000,000</td>
 					</tr>
 					<tr>
-						<td>12월</td>
+						<td><a href="#" onclick="dayWatch(12)">12월</a></td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
 						<td>1,000,000</td>
@@ -469,9 +353,11 @@ $(function(){
 			<img src="../images/@graph4.gif" alt="그래프자리">
 		</div>
 		<!-- //@그래프자리 -->
+		</div>
 		<!-- //tab_월별 -->	
 		
 		<!-- tab_일별 -->
+		<div id="tapDay" class="tab-pane fade">
 		<!-- message -->
 		<div class="box_b3 mb_15">
 			<ul class="txt_info">
@@ -900,9 +786,11 @@ $(function(){
 			<img src="../images/@graph4.gif" alt="그래프자리">
 		</div>
 		<!-- //@그래프자리 -->
+		</div>
 		<!-- //tab_일별 -->
 		
 		<!-- tab_증감 TOP 10 업체 -->
+		<div id="tapTop10" class="tab-pane fade">
 		<!-- message -->
 		<div class="box_b3 mb_15">
 			<ul class="txt_info">
@@ -1300,8 +1188,19 @@ $(function(){
 				</tbody>			
 			</table>
 		</div>
+		</div>
 		<!-- //tab_증감 TOP 10 업체 -->
 	</div>
+	</div>
 	<!-- //contents -->
-</body>
-</html>
+	<script type="text/javascript" language="javascript">
+	
+	function dayWatch(month) {
+        $("#moveDay").trigger('click');
+ 	}
+	
+ 
+	</script>
+
+
+</@page.base>

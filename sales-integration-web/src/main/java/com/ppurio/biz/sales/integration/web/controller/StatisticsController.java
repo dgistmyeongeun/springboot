@@ -37,4 +37,19 @@ public class StatisticsController {
    public String account() {
 	   return "/05_statistics/05_statistics_accountStatistics";
    }
+   
+   @GetMapping(value="/line.statistic")
+   public String line() {
+	   return "/05_statistics/05_statistics_lineStatistics";
+   }
+   
+   @GetMapping(value="/sendWatch.statistic")
+   public String sendWatch() {
+	   return "/05_statistics/05_statistics_sendWatch";
+   }
+   
+   @GetMapping(value="/sendlistSearch.statistic")
+   public String sendlistSearch() {
+	   return "/05_statistics/05_statistics_sendlistSearch";
+   }
 }

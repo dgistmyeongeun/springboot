@@ -53,7 +53,7 @@
 		
 		<!-- 하단 버튼 -->
 		<div class="btn_area mb_15">
-			<a class="btn lg btn_blue" href="#">확인</a>
+			<a class="btn lg btn_blue" href="#" onClick="javascript:window.open('useConfirm.pop','useConfirm','scrollbars=no, resizable=no, width=800,height=400')">확인</a>
 			<a class="btn lg btn_gray" href="#">취소</a>
 		</div>
 		<!-- //하단 버튼 -->		

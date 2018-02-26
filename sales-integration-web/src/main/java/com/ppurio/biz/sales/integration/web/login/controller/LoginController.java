@@ -45,9 +45,6 @@ public class LoginController {
 
     @GetMapping("/login.do")
     String login(){
-    	/*model.put("baseTitle", this.baseTitle);
-    	model.put("baseStyle", this.baseStyle);
-    	model.put("baseScript", this.baseScript);*/
         return "/login/form";
     }
     

@@ -78,7 +78,7 @@
 					<td>2017.12.31 13:00</td>
 					<td>-</td>
 					<td>
-						<a href="" class="btn_sm_gray">해지</a>
+						<a href="#" class="btn_sm_gray" onClick="javascript:window.open('outmember.pop','outmember','scrollbars=no, resizable=no, width=800,height=400')">해지</a>
 					</td>
 				</tr>
 				<tr>
@@ -90,7 +90,7 @@
 					<td>2017.12.31 13:00</td>
 					<td>-</td>
 					<td>
-						<a href="" class="btn_sm_gray">해지</a>
+						<a href="#" class="btn_sm_gray" onClick="javascript:window.open('outmember.pop','outmember','scrollbars=no, resizable=no, width=800,height=400')">해지</a>
 					</td>
 				</tr>
 				<tr>
@@ -102,7 +102,7 @@
 					<td>2017.12.31 13:00</td>
 					<td>-</td>
 					<td>
-						<a href="" class="btn_sm_gray">해지</a>
+						<a href="#" class="btn_sm_gray" onClick="javascript:window.open('outmember.pop','outmember','scrollbars=no, resizable=no, width=800,height=400')">해지</a>
 					</td>
 				</tr>
 				<tr>
@@ -114,7 +114,7 @@
 					<td>2017.12.31 13:00</td>
 					<td>-</td>
 					<td>
-						<a href="" class="btn_sm_gray">해지</a>
+						<a href="#" class="btn_sm_gray" onClick="javascript:window.open('outmember.pop','outmember','scrollbars=no, resizable=no, width=800,height=400')">해지</a>
 					</td>
 				</tr>
 				<tr>
@@ -126,7 +126,7 @@
 					<td>2017.12.31 13:00</td>
 					<td>-</td>
 					<td>
-						<a href="" class="btn_sm_gray">해지</a>
+						<a href="#" class="btn_sm_gray" onClick="javascript:window.open('outmember.pop','outmember','scrollbars=no, resizable=no, width=800,height=400')">해지</a>
 					</td>
 				</tr>
 				<tr>

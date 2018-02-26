@@ -23,10 +23,10 @@
 	<!-- sidebar -->
 	<div class="sidebar">
 		<ul class="nav">
-			<li class="menu"><a href="#">계정별 발송통계</a></li>
-			<li class="menu"><a href="#">라인별 발송현황</a></li>
-			<li class="menu"><a href="#">발송 추이</a></li>
-			<li class="menu"><a href="#">발송 내역 조회</a></li>
+			<li class="menu"><a href="account.statistic">계정별 발송통계</a></li>
+			<li class="menu"><a href="line.statistic">라인별 발송현황</a></li>
+			<li class="menu"><a href="sendWatch.statistic">발송 추이</a></li>
+			<li class="menu"><a href="sendlistSearch.statistic">발송 내역 조회</a></li>
 		</ul>
 	</div> 
 	<!-- //sidebar -->

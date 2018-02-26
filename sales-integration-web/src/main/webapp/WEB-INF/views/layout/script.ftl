@@ -6,5 +6,7 @@
 	<script type="text/javascript" src="js/menu2.js"></script>
 	<script type="text/javascript" src="js/checkbox.js"></script>
 	<script type="text/javascript" src="js/rfRoomSelect.js?v=2"></script>
+	<script type="text/javascript" src="js/purchase_period.js?v=2"></script>
+	<script type="text/javascript" src="js/bannerPop.js"></script>
 </#macro>
 

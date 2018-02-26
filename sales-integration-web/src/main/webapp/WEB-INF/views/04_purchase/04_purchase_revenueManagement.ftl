@@ -15,35 +15,39 @@
 		
 		<!-- 조회 -->
 		<div class="box_grey box_search_l3">
-		<form action="revenueConfirm.purchase" method="post" id="frm_m">
+		<form action="revenueConfirm.purchase" id="frm_m">
 			<div class="form_group">
 				<p>
 					<label class="bul mr_15">조회기간 선택</label>
-					<label for="monthRadios"><input name="monthRadios" id="monthRadios" type="radio" value="option3"> 월별</label>
-					<label class="mr_15" for="termRadios"><input name="termRadios" id="termRadios" type="radio" checked="" value="option4"> 기간별</label>		
-					
+					<label for="monthtermRadios"><input name="monthtermRadios" id="monthRadios" type="radio" value="option3" onclick="display_period_hide()"> 월별</label>
+					<label class="mr_15" for="monthtermRadios"><input name="monthtermRadios" id="termRadios" type="radio" checked="" value="option4" onclick="display_period_show()"> 기간별</label>		
+							
+	
 					<!-- 기간별 선택 시 -->
-					<select class="w80">
-						<option value="">2017</option>
-					</select> 년
-					<select class="w60">
-						<option value="">00</option>
-					</select> 월
-					<select class="w60">
-						<option value="">00</option>
-					</select> 일 ~					
-					<select class="w80">
-						<option value="">2017</option>
-					</select> 년
-					<select class="w60">
-						<option value="">00</option>
-					</select> 월
-					<select class="w60">
-						<option value="">00</option>
-					</select> 일				
-					<span class="f15">3일간</span>					
+					<span id="purchase_period">
+						<select class="w80">
+							<option value="">2017</option>
+						</select> 년
+						<select class="w60">
+							<option value="">00</option>
+						</select> 월
+						<select class="w60">
+							<option value="">00</option>
+						</select> 일 ~					
+						<select class="w80">
+							<option value="">2017</option>
+						</select> 년
+						<select class="w60">
+							<option value="">00</option>
+						</select> 월
+						<select class="w60">
+							<option value="">00</option>
+						</select> 일				
+						<span class="f15">3일간</span>	
+					</span>				
 				</p>
-				<p>
+				<!-- 명은:월별 선택시 -->
+				<p ><!-- id="purchase_month" style="display:none" -->
 					<label class="bul">기준일 선택</label>
 					<select class="w80">
 						<option value="">2017</option>
@@ -82,7 +86,7 @@
 					<label for="serviceSelect" class="bul mr_15">고객사명
 						<input type="text" class="w150" name="serviceSelect" id="serviceSelect" placeholder="검색 내용 입력"> 
 					</label>
-					<label for="teamSelect" class="bul mr_15">사업자번호
+					<label for="teamSelect" class="bul mr_15 bizSelect">사업자번호
 						<input type="text" class="w150" name="teamSelect" id="teamSelect" placeholder="검색 내용 입력"> 				
 					</label>
 					<label for="managerSelect" class="bul mr_3">ID

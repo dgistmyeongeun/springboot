@@ -54,8 +54,8 @@
 		
 		<!-- button -->
 		<div class="align_r">
-			<a href="" class="btn md btn_black">전체 취소</a>
-			<a href="" class="btn md btn_gray">부분 취소</a>
+			<a href="#" class="btn md btn_black" onClick="javascript:window.open('reservationsentAll.pop','reservationsentAll','scrollbars=no, resizable=no, width=800,height=400')">전체 취소</a>
+			<a href="" class="btn md btn_gray" onClick="javascript:window.open('reservationsentCancel.pop','reservationsentCancel','scrollbars=no, resizable=no, width=800,height=400')">부분 취소</a>
 		</div>
 		<!-- //button -->
 		

@@ -58,7 +58,7 @@
 					</select> 일				
 				</p>
 			</div>
-			<div class="btn_box"><a href="#" class="btn_sch_black r3">조회</a></div>
+			<div class="btn_box"><a href="#" class="btn_black r3 md" onClick="javascript:window.open('spam.pop','spam','scrollbars=no, resizable=no, width=800,height=600')">조회</a></div><!-- btn_sch_black r3 -->
 		</div>
 		<!-- //조회 -->
 		
@@ -236,4 +236,10 @@
 		<!-- //paging -->		
 	</div>
 	 <!-- //contents -->
+	 
+	 <script type="text/javascript">
+	 	$("#slaveRadios").on('click', function(){
+	 		window.open("slaveID.pop","slaveID", 'scrollbars=no, resizable=no, width=800,height=400');
+	 	})
+	 </script>
 </@page.base>

@@ -112,7 +112,7 @@
 		
 		<!-- 하단 버튼 -->
 		<div class="btn_area mb_15">
-			<a class="btn lg btn_blue" href="#">등록</a>
+			<a class="btn lg btn_blue" href="#" onClick="javascript:window.open('b2cidApply.pop','b2cidApply','scrollbars=no, resizable=no, width=800,height=400')">등록</a>
 		</div>		
 		<!-- //하단 버튼 -->
 	</div>

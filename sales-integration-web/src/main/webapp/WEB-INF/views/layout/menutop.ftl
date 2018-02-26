@@ -3,7 +3,7 @@
 		<div class="nav">
 			<h1>
 				<a href="#">
-					<img src="images/logo_bizppurio.png" alt="비즈뿌리오로고">
+					<img src="../images/logo_bizppurio.png" alt="비즈뿌리오로고">
 					<span class="f15">영업관리시스템</span>
 				</a>
 			</h1>
@@ -39,7 +39,7 @@
 						<li><a href="#">자동이체</a></li>
 					</ul>
 				</li>
-				<li><a href="reference.purchase">매출/매입관리</a>
+				<li><a href="#">매출/매입관리</a>
 					<ul class="sub">
 						<li></li>
 						<li><a href="reference.purchase">매출조회</a></li>
@@ -48,13 +48,13 @@
 						<li><a href="purchaseSearch.purchase">매입관리</a></li>
 					</ul>
 				</li>
-				<li><a href="account.statistic">통계</a>
+				<li><a href="#">통계</a>
 					<ul class="sub">
 						<li></li>
 						<li><a href="account.statistic">계정별 발송통계</a></li>
-						<li><a href="#">라인별 발송현황</a></li>
-						<li><a href="#">발송추이</a></li>
-						<li><a href="#">발송내역 조회</a></li>                            
+						<li><a href="line.statistic">라인별 발송현황</a></li>
+						<li><a href="sendWatch.statistic">발송추이</a></li>
+						<li><a href="sendlistSearch.statistic">발송내역 조회</a></li>                            
 					</ul>
 				</li>
 				<li><a href="#">기타</a>

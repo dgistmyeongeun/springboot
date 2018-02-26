@@ -1,7 +1,5 @@
 <#import "../layout/sidebar_etc.ftl" as page>
-<#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 슬라이드바' />
-
 <@page.base pageTitle>
     <!-- contents -->
     <div class="container_r">    
@@ -28,7 +26,7 @@
 				<a href="" class="btn md btn_green">비즈뿌리오</a>
 			</span>
 			<span class="f_r">
-				<a href="" class="btn md btn_blue">등록</a>
+				<a href="#" class="btn md btn_blue"  onClick="javascript:window.open('bannerPop.pop','bannerPop','scrollbars=no, resizable=no, width=800,height=400')">등록</a>
 				<a href="" class="btn md btn_gray">삭제</a>
 			</span>
 		</div>
@@ -138,6 +136,12 @@
 		
 	</div>
 	<!-- //contents -->
-</body>
-</html>
+
 </@page.base>
+
+
+<!-- <script type="text/javascript">
+function bannerPop(){
+	$('#myModal').modal('open');
+}
+</script> -->

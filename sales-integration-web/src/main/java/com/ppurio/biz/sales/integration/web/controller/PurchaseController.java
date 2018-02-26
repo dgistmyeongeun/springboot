@@ -33,9 +33,10 @@ public class PurchaseController {
  	   return "/04_purchase/04_purchase_referance";
     }
     //매출조회:선불고객사
-    @GetMapping(value="/referencePre.purchase")
+    @GetMapping(value="/prePost.purchase")
     public String referencePre() {
- 	   return "/04_purchase/04_purchase_referance_prepaymDetail";
+    	
+ 	   	return "/04_purchase/04_purchase_referance_prepaymDetail";
     }
     //매출조회:후불고객사
     @GetMapping(value="/referencePost.purchase")
@@ -55,9 +56,8 @@ public class PurchaseController {
  	   return "/04_purchase/04_purchase_revenueManagement";
     }
     //선수수익관리:조회
-    @ResponseBody
-    @RequestMapping(value="/revenueConfirm.purchase", method=RequestMethod.POST)
-    public String revenueConfirm(@RequestBody Period period) {
+    @GetMapping(value="/revenueConfirm.purchase")
+    public String revenueConfirm() {
  	   	return "/04_purchase/04_purchase_revenueManagement_confirm";
     }
     

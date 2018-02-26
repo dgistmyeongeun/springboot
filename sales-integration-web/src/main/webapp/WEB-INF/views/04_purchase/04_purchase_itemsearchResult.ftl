@@ -175,5 +175,4 @@
 		<!-- //paging -->										
 	</div>
 	<!-- //contents -->
-</body>
-</html>
+</@page.base>
