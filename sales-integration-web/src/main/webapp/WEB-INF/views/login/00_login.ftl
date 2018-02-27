@@ -15,9 +15,6 @@ jQuery( function($) { // HTML 문서를 모두 읽으면 포함한 코드를 실
     // 변수 이름을 're_'로 정한것은 'Reguar Expression'의 머릿글자
     var re_id = /^[a-z0-9_-]{3,16}$/; // 아이디 검사식
     var re_pw = /^[a-z0-9_-]{6,18}$/; // 비밀번호 검사식
-    var re_mail = /^([\w\.-]+)@([a-z\d\.-]+)\.([a-z\.]{2,6})$/; // 이메일 검사식
-    var re_url = /^(https?:\/\/)?([a-z\d\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?$/; // URL 검사식
-    var re_tel = /^[0-9]{8,11}$/; // 전화번호 검사식
      
     // 선택할 요소를 변수에 할당
     // 변수에 할당하지 않으면 매번 HTML 요소를 선택해야 하기 때문에 귀찮고 성능에도 좋지 않다
@@ -28,7 +25,7 @@ jQuery( function($) { // HTML 문서를 모두 읽으면 포함한 코드를 실
         uid = $('#id'),
         upw = $('#pw'),
         otp = $('#otp');
-         
+       
     // 선택한 form에 서밋 이벤트가 발생하면 실행한다
     // if (사용자 입력 값이 정규식 검사에 의해 참이 아니면) {포함한 코드를 실행}
     // if 조건절 안의 '정규식.test(검사할값)' 형식은 true 또는 false를 반환한다
@@ -37,7 +34,7 @@ jQuery( function($) { // HTML 문서를 모두 읽으면 포함한 코드를 실
     // 사용자 입력 값이 참이 아니면 오류가 발생한 input으로 포커스를 보낸다
     // 사용자 입력 값이 참이 아니면 form 서밋을 중단한다
     form.submit( function() {
-    	alert("하하");
+    	 //alert(otp.val().length);
         if (re_id.test(uid.val()) != true) { // 아이디 검사
             alert('[ID 입력 오류] 유효한 ID를 입력해 주세요.');
             uid.focus();
@@ -45,6 +42,10 @@ jQuery( function($) { // HTML 문서를 모두 읽으면 포함한 코드를 실
         } else if(re_pw.test(upw.val()) != true) { // 비밀번호 검사
             alert('[PW 입력 오류] 유효한 PW를 입력해 주세요.');
             upw.focus();
+            return false;
+        } else if(otp.val().length <= 1) { // 비밀번호 검사
+            alert('[OTP 입력 오류] 유효한 OTP를 입력해 주세요.');
+            otp.focus();
             return false;
         }
     });
@@ -83,14 +84,6 @@ jQuery( function($) { // HTML 문서를 모두 읽으면 포함한 코드를 실
         }
     });
      
-    // #tel 인풋에 onkeydown 이벤트가 발생하면
-    // 하이픈(-) 키가 눌렸는지 확인
-    // 하이픈(-) 키가 눌렸다면 입력 중단
-    tel.keydown( function() {
-        if(event.keyCode==109 || event.keyCode==189) {
-            return false;
-        }
-    });
 });
 </script>
 </head>
@@ -100,12 +93,12 @@ jQuery( function($) { // HTML 문서를 모두 읽으면 포함한 코드를 실
 		<h1><img src="images/login_logo.png" alt="" /><span>비즈메세징 영업관리시스템</span></h1>
 		<div class="login_box">
 			<div class="form">
-				<form class="login_form" action="">
+				<form class="login_form" action="./loginProc.do" method="post">
 					<p><label for="id" class="id_b">아이디</label>
 					<input type="text" id="id" class="pw_b" placeholder="아이디"/></p>
 					<p><label for="pw">비밀번호</label>
 					<input type="password" id="pw" placeholder="비밀번호"/></p>
-					<span class="mb_15"><label><input type="checkbox" value=""> 아이디 저장</label></span>
+					<span class="mb_15"><label><input type="checkbox" value="" id="saveID"> 아이디 저장</label></span>
 					<p><label for="otp">OTP</label>
 					<input type="text" id="otp" class="pw_b" placeholder="OTP"/></p>
 					<div class="btn_box"><button class="login" type="submit">로그인</button></div>     

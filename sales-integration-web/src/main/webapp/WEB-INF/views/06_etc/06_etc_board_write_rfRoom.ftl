@@ -1,4 +1,5 @@
 <#import "../layout/sidebar_etc.ftl" as page>
+<#import "../layout/title.ftl" as Title>
 <#assign pageTitle='영업관리시스템 - 슬라이드바' />
 
 <@page.base pageTitle>
@@ -6,11 +7,9 @@
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
-    	<div class="title_b">
-    		<em></em>
-    		<h2>자료실/FAQ</h2>
-			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="asp.etc">기타</a> > <a href="">게시물 관리</a> > <a href="">자료실/FAQ</a></blockquote>
-		</div>
+    	<@Title.title_m "자료실/FAQ">
+			<a href="">홈</a> > <a href="asp.etc">기타</a> > <a href="notice.etc">게시물 관리</a> > <a href="write_rfRoom.etc">자료실/FAQ</a>
+		</@Title.title_m>
 		<!-- //title -->
 				
 		<!-- message -->
@@ -74,26 +73,50 @@
 							<!-- //게시판 에디터 자리 -->
 						</td>
 					</tr>
-					<tr class="changeArea_m">
-						<th>첨부파일</th>
-						<td colspan="5">
-							<input type="file" class="w300 mr_5">
-						</td>
-					</tr>
-					<tr class="changeArea_m">
-						<th>최상위 노출</th>
-						<td colspan="5"><input type="checkbox"></td>
-					</tr>
-					
+					<div class="faqfile">
+						<tr class="changeArea_m">
+							<th>첨부파일</th>
+							<td colspan="5">
+								<input type="file" class="w300 mr_5">
+							</td>
+						</tr>
+						<tr class="changeArea_m">
+							<th>최상위 노출</th>
+							<td colspan="5"><input type="checkbox"></td>
+						</tr>
+					</div>
+					<div class="popup fade">
+						<tr class="changeArea_m">
+							<th>최상위 노출</th>
+							<td colspan="5"><input type="checkbox"></td>
+						</tr>
+						<tr>
+							<th><b class="txt_c_red">*</b> 노출 여부</th>
+							<td colspan="5">
+								<label for="yesRadios"><input type="radio" id="yesRadios" name="yesRadios" checked="" class="mr_3"> 예</label>
+								<label for="noRadios"><input type="radio" id="noRadios" name="noRadios" class="ml_20 mr_3"> 아니오</label>						
+							</td>
+						</tr>				
+						<tr>
+							<th><b class="txt_c_red">*</b> 노출 기간</th>
+							<td colspan="5">
+								<input type="text" class="w100"><button class="calendar"></button>~ <input type="text" class="w100"><button class="calendar"></button>
+							</td>
+						</tr>
+						<tr>
+							<th><b class="txt_c_red">*</b> 팝업 사이즈</th>
+							<td colspan="5">
+								<label for="widthInput">가로 <input type="text" name="widthInput" id="widthInput" class="w100"></label> <span class="ml_3 mr_15" >px</span>
+								<label for="heightInput">세로 <input type="text" name="widthInput" id="heightInput" class="w100"></label> <span>px</span>
+							</td>
+						</tr>
+				</div>
 				</tbody> 			
 			</table>
 		<!-- //table -->
 		
 		<!-- 하단 버튼 -->
-		<div class="btn_area mb_15">
-			<a href="#" class="btn lg btn_blue">등록</a>
-			<a href="#" class="btn lg btn_gray">취소</a>
-		</div>
+		<@Title.bottom_m "등록" />
 		<!-- //하단 버튼 -->
 		
 	</div>

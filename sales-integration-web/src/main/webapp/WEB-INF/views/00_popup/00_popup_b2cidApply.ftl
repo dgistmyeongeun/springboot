@@ -17,7 +17,7 @@
 		<div class="contents">
 			<p class="align_c">Ppurio30 의 hs0610 아이디를 B2C 유저로 등록 하시겠습니까?</p>
 		</div>
-		<div class="btn_area"><button class="btn md btn_blue" onClick="javascript:window.open('masteridApply.pop','masteridApply','scrollbars=no, resizable=no, width=800,height=400'); self.close();">입력</button><button class="btn md btn_gray ml_5"  onClick="self.close();">취소</button></div>		
+		<div class="btn_area"><button class="btn md btn_blue" onClick="javascript:window.open('masteridApply.pop','masteridApply','scrollbars=no, resizable=no, width=800,height=800'); self.close();">입력</button><button class="btn md btn_gray ml_5"  onClick="self.close();">취소</button></div>		
 	</div>
 	</div>
 	</div>

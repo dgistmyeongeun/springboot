@@ -1,5 +1,5 @@
 <#import "../layout/sidebar_etc.ftl" as page>
-<#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
+<#import "../layout/title.ftl" as Title>
 <#assign pageTitle='영업관리시스템 - 슬라이드바' />
 
 <@page.base pageTitle>
@@ -7,11 +7,9 @@
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
-    	<div class="title_b">
-    		<em></em>
-    		<h2>공지/팝업</h2>
-			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="asp.etc">기타</a> > <a href="">게시물 관리</a> > <a href="">공지/팝업</a></blockquote>
-		</div>
+    	<@Title.title_m "공지/팝업">
+			<a href="">홈</a> > <a href="asp.etc">기타</a> > <a href="notice.etc">게시물 관리</a> > <a href="writenotice.etc">공지/팝업</a>
+		</@Title.title_m>
 		<!-- //title -->
 				
 		<!-- message -->
@@ -87,10 +85,7 @@
 
 				
 		<!-- 하단 버튼 -->
-		<div class="btn_area mb_15">
-			<a href="#" class="btn lg btn_blue">등록</a>
-			<a href="#" class="btn lg btn_gray">취소</a>
-		</div>
+		<@Title.bottom_m "등록" />
 		<!-- //하단 버튼 -->
 	</div>
 	<!-- //contents -->

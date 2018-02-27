@@ -365,7 +365,6 @@
 			</ul>					
 		</div>
 		<!-- //message -->
-		
 		<!-- button -->
 		<div class="align_r mb_15">
 			<a href="" class="btn md btn_green mr_3">excel</a><a href="" class="btn md btn_blue">인쇄</a>

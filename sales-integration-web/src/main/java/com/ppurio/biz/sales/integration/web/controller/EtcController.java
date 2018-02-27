@@ -5,39 +5,36 @@
  */
 package com.ppurio.biz.sales.integration.web.controller;
 
-import java.io.IOException;
-import java.io.StringWriter;
-import java.io.Writer;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
-import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.ppurio.biz.sales.integration.web.MemberVO;
-
-import freemarker.core.ParseException;
-import freemarker.template.Configuration;
-import freemarker.template.MalformedTemplateNameException;
-import freemarker.template.Template;
-import freemarker.template.TemplateNotFoundException;
+import com.ppurio.biz.sales.integration.web.Entity.FAQEntity;
+import com.ppurio.biz.sales.integration.web.Entity.SpamEntity;
 
 @Controller
 public class EtcController {
     
     private static final Logger logs = LoggerFactory.getLogger(EtcController.class);
+    
+    
+    List<FAQEntity> faqlist = new ArrayList<>();
+    List<SpamEntity> spamlist = new ArrayList<>();
     
    //전산담당자 정보 입력
    @RequestMapping(value="/account.etc")
@@ -92,7 +89,14 @@ public class EtcController {
    
    //스팸모니터링-히스토리
    @GetMapping(value="/spamreport.etc")
-   public String spamReport(HttpServletRequest request) {
+   public String spamReport(HttpServletRequest request, Model model) {
+	   Date now = new Date();
+	   Calendar cal = new GregorianCalendar(2017,7,16);
+	   Date date = cal.getTime();
+	   for(int i=0; i<10; i++) 
+		   spamlist.add(new SpamEntity(date ,now, 5, "B125", "daou_3", "01012345678", "010****1234", "[Web발신}☆사랑하는☆ …"));
+	   
+	   model.addAttribute("spamlist", spamlist);
 	   return "/06_etc/06_etc_spamMonitoring_reportHistory";
    }
    
@@ -110,7 +114,15 @@ public class EtcController {
    
  //자료실 FAQ
    @GetMapping(value="/rfroom.etc")
-   public String boardRfroom() {
+   public String boardRfroom(Model model) {
+	   int x = 130;
+
+	   while(x-130<10) {
+		   faqlist.add(new FAQEntity(x++, "유빗", "공지", "정책 안내", "[공지] Ufit 이용약관 개정 안내", "20180225"));
+		   faqlist.add(new FAQEntity(x++, "비즈뿌리오", "팝업", "정책 안내", "Ufit GW (DUO) 장비 교체 작업 공지","20180221"));
+		   faqlist.add(new FAQEntity(x++, "전체", "팝업", "이벤트 안내", "[룰렛이벤트] 100% 당첨!!", "20180225"));
+	   }
+	   model.addAttribute("faqlist",faqlist);
 	   return "/06_etc/06_etc_board_list_rfRoom";
    }
 

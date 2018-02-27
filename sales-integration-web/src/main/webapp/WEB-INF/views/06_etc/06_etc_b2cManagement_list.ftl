@@ -1,16 +1,14 @@
 <#import "../layout/sidebar_etc.ftl" as page>
-<#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
-<#assign pageTitle='영업관리시스템 - 슬라이드바' />
+<#import "../layout/title.ftl" as Title>
+<#assign pageTitle='기타 - B2C등록' />
 
 <@page.base pageTitle>
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
-    	<div class="title_b">
-    		<em></em>
-    		<h2>B2C 관리</h2>
-			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="asp.etc">기타</a> > <a href="">B2C 관리</a> > <a href="">리스트 관리</a></blockquote>
-		</div>
+    	<@Title.title_m "B2C 관리">
+			<a href="">홈</a> > <a href="asp.etc">기타</a> > <a href="b2clist.etc">B2C 관리</a> > <a href="b2clist.etc">리스트 관리</a>
+		</@Title.title_m>
 		<!-- //title -->
 		
 		<!-- message -->
@@ -47,14 +45,9 @@
 		<!-- table -->
 		<table class="tb_list_b">
 			<colgroup>
-				<col style="width:12.5%">
-				<col style="width:12.5%">
-				<col style="width:12.5%">
-				<col style="width:12.5%">
-				<col style="width:12.5%">
-				<col style="width:12.5%">
-				<col style="width:12.5%">
-				<col style="width:12.5%">
+				<#list 1..8 as i>
+					<col style="width:12.5%">
+				</#list>
 			</colgroup>
 			<thead>
 				<tr>
@@ -69,6 +62,7 @@
 				</tr>
 			</thead>
 			<tbody>
+				<#list 1..10 as i>
 				<tr>
 					<td>1233</td>
 					<td>H20610</td>
@@ -76,109 +70,17 @@
 					<td>mobile_1</td>
 					<td>biz5</td>
 					<td>2017.12.31 13:00</td>
-					<td>-</td>
-					<td>
-						<a href="#" class="btn_sm_gray" onClick="javascript:window.open('outmember.pop','outmember','scrollbars=no, resizable=no, width=800,height=400')">해지</a>
-					</td>
+					<#if i<=5>
+						<td>-</td>
+						<td>
+							<a href="#" class="btn_sm_gray" onClick="javascript:window.open('outmember.pop','outmember','scrollbars=no, resizable=no, width=800,height=400')">해지</a>
+						</td>
+					<#else>
+						<td>2018.01.31 13:00</td>
+						<td></td>
+					</#if>
 				</tr>
-				<tr>
-					<td>1233</td>
-					<td>H20610</td>
-					<td>pspurio30</td>
-					<td>mobile_1</td>
-					<td>biz5</td>
-					<td>2017.12.31 13:00</td>
-					<td>-</td>
-					<td>
-						<a href="#" class="btn_sm_gray" onClick="javascript:window.open('outmember.pop','outmember','scrollbars=no, resizable=no, width=800,height=400')">해지</a>
-					</td>
-				</tr>
-				<tr>
-					<td>1233</td>
-					<td>H20610</td>
-					<td>pspurio30</td>
-					<td>mobile_1</td>
-					<td>biz5</td>
-					<td>2017.12.31 13:00</td>
-					<td>-</td>
-					<td>
-						<a href="#" class="btn_sm_gray" onClick="javascript:window.open('outmember.pop','outmember','scrollbars=no, resizable=no, width=800,height=400')">해지</a>
-					</td>
-				</tr>
-				<tr>
-					<td>1233</td>
-					<td>H20610</td>
-					<td>pspurio30</td>
-					<td>mobile_1</td>
-					<td>biz5</td>
-					<td>2017.12.31 13:00</td>
-					<td>-</td>
-					<td>
-						<a href="#" class="btn_sm_gray" onClick="javascript:window.open('outmember.pop','outmember','scrollbars=no, resizable=no, width=800,height=400')">해지</a>
-					</td>
-				</tr>
-				<tr>
-					<td>1233</td>
-					<td>H20610</td>
-					<td>pspurio30</td>
-					<td>mobile_1</td>
-					<td>biz5</td>
-					<td>2017.12.31 13:00</td>
-					<td>-</td>
-					<td>
-						<a href="#" class="btn_sm_gray" onClick="javascript:window.open('outmember.pop','outmember','scrollbars=no, resizable=no, width=800,height=400')">해지</a>
-					</td>
-				</tr>
-				<tr>
-					<td>1233</td>
-					<td>H20610</td>
-					<td>pspurio30</td>
-					<td>mobile_1</td>
-					<td>biz5</td>
-					<td>2017.12.31 13:00</td>
-					<td>2018.01.31 13:00</td>
-					<td></td>
-				</tr>				
-				<tr>
-					<td>1233</td>
-					<td>H20610</td>
-					<td>pspurio30</td>
-					<td>mobile_1</td>
-					<td>biz5</td>
-					<td>2017.12.31 13:00</td>
-					<td>2018.01.31 13:00</td>
-					<td></td>
-				</tr>				
-				<tr>
-					<td>1233</td>
-					<td>H20610</td>
-					<td>pspurio30</td>
-					<td>mobile_1</td>
-					<td>biz5</td>
-					<td>2017.12.31 13:00</td>
-					<td>2018.01.31 13:00</td>
-					<td></td>
-				</tr>				
-				<tr>
-					<td>1233</td>
-					<td>H20610</td>
-					<td>pspurio30</td>
-					<td>mobile_1</td>
-					<td>biz5</td>
-					<td>2017.12.31 13:00</td>
-					<td>2018.01.31 13:00</td>
-					<td></td>
-				</tr>				
-				<tr>
-					<td>1233</td>
-					<td>H20610</td>
-					<td>pspurio30</td>
-					<td>mobile_1</td>
-					<td>biz5</td>
-					<td>2017.12.31 13:00</td>
-					<td>2018.01.31 13:00</td>
-					<td></td>
-				</tr>												
+				</#list>
 			</tbody>
 		</table>
 		<!-- //table -->

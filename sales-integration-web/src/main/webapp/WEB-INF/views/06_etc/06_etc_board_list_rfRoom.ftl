@@ -1,17 +1,15 @@
 <#import "../layout/sidebar_etc.ftl" as page>
-<#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
-<#assign pageTitle='영업관리시스템 - 슬라이드바' />
+<#import "../layout/title.ftl" as Title>
+<#assign pageTitle='기타 - 자료실/FAQ' />
 
 <@page.base pageTitle>
    
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
-    	<div class="title_b">
-    		<em></em>
-    		<h2>자료실/FAQ</h2>
-			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="asp.etc">기타</a> > <a href="">게시물 관리</a> > <a href="">자료실/FAQ</a></blockquote>
-		</div>
+    	<@Title.title_m "자료실/FAQ">
+			<a href="">홈</a> > <a href="asp.etc">기타</a> > <a href="notice.etc">게시물 관리</a> > <a href="rfroom.etc">FAQ</a>
+		</@Title.title_m>
 		<!-- //title -->
 				
 		<!-- message -->
@@ -24,13 +22,7 @@
 		<!-- //message -->
 		
 		<!-- 검색 -->
-		<div class="box_grey box_search">
-			<p class="align_c">
-				<label class="bul">제목</label>
-				<input id="input1" type="text" placeholder="검색 내용 입력" class="w200">
-				<a href="#" class="btn_sm_sch_black r3">검색</a>
-			</p>
-		</div>
+		<@Title.search_m />
 		<!-- //검색 -->
 		
 		<!-- button -->
@@ -73,115 +65,24 @@
 					</tr>
 				</thead>
 				<tbody>
+				<#list faqlist as faqlist>
 					<tr>
-						<td>1300</td>
-						<td>유핏</td>
-						<td>자료실</td>
-						<td>모듈/매뉴얼</td>
-						<td>유핏 모듈 v5.0</td>
-						<td>2017.12.12</td>
+  						<td>${faqlist.no}</td>
+  						<td>${faqlist.service}</td>
+						<td>${faqlist.divide}</td>
+						<td>${faqlist.category}</td>
+						<td>${faqlist.title}</td>
+						<td>${faqlist.writeDate}</td>
 						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>1300</td>
-						<td>유핏</td>
-						<td>자료실</td>
-						<td>모듈/매뉴얼</td>
-						<td>유핏 모듈 v5.0</td>
-						<td>2017.12.12</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>1300</td>
-						<td>유핏</td>
-						<td>자료실</td>
-						<td>모듈/매뉴얼</td>
-						<td>유핏 모듈 v5.0</td>
-						<td>2017.12.12</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>1300</td>
-						<td>유핏</td>
-						<td>자료실</td>
-						<td>모듈/매뉴얼</td>
-						<td>유핏 모듈 v5.0</td>
-						<td>2017.12.12</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>1300</td>
-						<td>유핏</td>
-						<td>자료실</td>
-						<td>모듈/매뉴얼</td>
-						<td>유핏 모듈 v5.0</td>
-						<td>2017.12.12</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>1300</td>
-						<td>유핏</td>
-						<td>자료실</td>
-						<td>모듈/매뉴얼</td>
-						<td>유핏 모듈 v5.0</td>
-						<td>2017.12.12</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>1300</td>
-						<td>유핏</td>
-						<td>자료실</td>
-						<td>모듈/매뉴얼</td>
-						<td>유핏 모듈 v5.0</td>
-						<td>2017.12.12</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>1300</td>
-						<td>유핏</td>
-						<td>자료실</td>
-						<td>모듈/매뉴얼</td>
-						<td>유핏 모듈 v5.0</td>
-						<td>2017.12.12</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>1300</td>
-						<td>유핏</td>
-						<td>자료실</td>
-						<td>모듈/매뉴얼</td>
-						<td>유핏 모듈 v5.0</td>
-						<td>2017.12.12</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>1300</td>
-						<td>유핏</td>
-						<td>자료실</td>
-						<td>모듈/매뉴얼</td>
-						<td>유핏 모듈 v5.0</td>
-						<td>2017.12.12</td>
-						<td><input type="checkbox"></td>
-					</tr>					
+  					</tr>
+				</#list>
 				</tbody>
 			</table>
 			<!-- //table -->
 		</div>
 		
 		<!-- paging -->
-		<div class="paging_b">
-			<span>
-				<button title="처음페이지" class="first" type="button">&lt;&lt;</button>
-				<button title="이전 10페이지" class="pre" type="button">&lt;</button> 
-			</span>
-			<span class="page">
-				<span class="here">1</span><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button">6</button><button type="button">7</button><button type="button">8</button><button type="button">9</button><button type="button">10</button> 
-			</span>
-			<span>       
-				<button title="다음 10페이지" class="next" type="button">&gt;</button>
-				<button title="마지막페이지" class="last" type="button">&gt;&gt;</button>
-			</span>
-		</div> 		
+		<@Title.paging_m /> 		
 		<!-- //paging -->		
 	</div>
 	<!-- //contents -->

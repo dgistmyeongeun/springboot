@@ -1,5 +1,5 @@
 <#import "../layout/sidebar_etc.ftl" as page>
-<#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
+<#import "../layout/title.ftl" as Title>
 <#assign pageTitle='영업관리시스템 - 슬라이드바' />
 
 <@page.base pageTitle>
@@ -7,11 +7,9 @@
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
-    	<div class="title_b">
-    		<em></em>
-    		<h2>스팸 신고내역 확인</h2>
-			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="">기타</a> > <a href="">스팸모니터링</a> > <a href="">스팸 신고내역 확인</a></blockquote>
-		</div>
+    	<@Title.title_m "스팸 신고내역 확인">
+			<a href="">홈</a> > <a href="asp.etc">기타</a> > <a href="spam.etc">스팸모니터링</a> > <a href="spamreport.etc">스팸 신고내역 확인</a>
+		</@Title.title_m>
 		<!-- //title -->
 		
 		<!-- message -->
@@ -103,6 +101,7 @@
 				<col style="width:12.5%">
 				<col style="width:16.5%">				
 			</colgroup>
+			
 			<thead>
 				<tr>
 					<th>접수일</th>
@@ -116,123 +115,23 @@
 				</tr>
 			</thead>
 			<tbody>
+			<#list spamlist as spamlist>
 				<tr>
-					<td>2017-01-22</td>
-					<td>2016-12-29 14:21:09</td>
-					<td>5건</td>
-					<td>B125</td>
-					<td>daou_3</td>
-					<td>01012345678</td>
-					<td>010****1234</td>
-					<td>[Web발신}☆사랑하는☆ …</td>
+					<td>${spamlist.requestDate?string("yyyy-MM-dd")}</td>
+					<td>${spamlist.responseDate?string("yyyy-MM-dd HH:mm:ss")} </td>
+					<td>${spamlist.count }건</td>
+					<td>${spamlist.zone }</td>
+					<td>${spamlist.id}</td>
+					<td>${spamlist.fromNum }</td>
+					<td>${spamlist.toNum }</td>
+					<td>${spamlist.msg }</td>
 				</tr>
-				<tr>
-					<td>2017-01-22</td>
-					<td>2016-12-29 14:21:09</td>
-					<td>5건</td>
-					<td>B125</td>
-					<td>daou_3</td>
-					<td>01012345678</td>
-					<td>010****1234</td>
-					<td>[Web발신}☆사랑하는☆ …</td>
-				</tr>
-				<tr>
-					<td>2017-01-22</td>
-					<td>2016-12-29 14:21:09</td>
-					<td>5건</td>
-					<td>B125</td>
-					<td>daou_3</td>
-					<td>01012345678</td>
-					<td>010****1234</td>
-					<td>[Web발신}☆사랑하는☆ …</td>
-				</tr>
-				<tr>
-					<td>2017-01-22</td>
-					<td>2016-12-29 14:21:09</td>
-					<td>5건</td>
-					<td>B125</td>
-					<td>daou_3</td>
-					<td>01012345678</td>
-					<td>010****1234</td>
-					<td>[Web발신}☆사랑하는☆ …</td>
-				</tr>
-				<tr>
-					<td>2017-01-22</td>
-					<td>2016-12-29 14:21:09</td>
-					<td>5건</td>
-					<td>B125</td>
-					<td>daou_3</td>
-					<td>01012345678</td>
-					<td>010****1234</td>
-					<td>[Web발신}☆사랑하는☆ …</td>
-				</tr>
-				<tr>
-					<td>2017-01-22</td>
-					<td>2016-12-29 14:21:09</td>
-					<td>5건</td>
-					<td>B125</td>
-					<td>daou_3</td>
-					<td>01012345678</td>
-					<td>010****1234</td>
-					<td>[Web발신}☆사랑하는☆ …</td>
-				</tr>
-				<tr>
-					<td>2017-01-22</td>
-					<td>2016-12-29 14:21:09</td>
-					<td>5건</td>
-					<td>B125</td>
-					<td>daou_3</td>
-					<td>01012345678</td>
-					<td>010****1234</td>
-					<td>[Web발신}☆사랑하는☆ …</td>
-				</tr>
-				<tr>
-					<td>2017-01-22</td>
-					<td>2016-12-29 14:21:09</td>
-					<td>5건</td>
-					<td>B125</td>
-					<td>daou_3</td>
-					<td>01012345678</td>
-					<td>010****1234</td>
-					<td>[Web발신}☆사랑하는☆ …</td>
-				</tr>
-				<tr>
-					<td>2017-01-22</td>
-					<td>2016-12-29 14:21:09</td>
-					<td>5건</td>
-					<td>B125</td>
-					<td>daou_3</td>
-					<td>01012345678</td>
-					<td>010****1234</td>
-					<td>[Web발신}☆사랑하는☆ …</td>
-				</tr>
-				<tr>
-					<td>2017-01-22</td>
-					<td>2016-12-29 14:21:09</td>
-					<td>5건</td>
-					<td>B125</td>
-					<td>daou_3</td>
-					<td>01012345678</td>
-					<td>010****1234</td>
-					<td>[Web발신}☆사랑하는☆ …</td>
-				</tr>
+				</#list>
 			</tbody>
 		</table>
 		
 		<!-- paging -->
-		<div class="paging_b">
-			<span>
-				<button title="처음페이지" class="first" type="button">&lt;&lt;</button>
-				<button title="이전 10페이지" class="pre" type="button">&lt;</button> 
-			</span>
-			<span class="page">
-				<span class="here">1</span><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button">6</button><button type="button">7</button><button type="button">8</button><button type="button">9</button><button type="button">10</button> 
-			</span>
-			<span>       
-				<button title="다음 10페이지" class="next" type="button">&gt;</button>
-				<button title="마지막페이지" class="last" type="button">&gt;&gt;</button>
-			</span>
-		</div> 		
+		<@Title.paging_m />	
 		<!-- //paging -->		
 	</div>
 	 <!-- //contents -->

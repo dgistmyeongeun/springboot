@@ -9,12 +9,18 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import com.ppurio.biz.sales.integration.web.Entity.Member;
 
 /**
  *
@@ -48,14 +54,33 @@ public class LoginController {
         return "/login/00_login";
     }
     
-    @PostMapping("/loginProc.do")
-    String login22(){
-    	Map<String, Object> model = new HashMap<String, Object>();
-    	model.put("empno","mong" );
-    	model.put("passwd","123" );
-    	model.put("otpno","456" );
-        return "/index";
-    }
-
+  /*  @PostMapping(value="loginProc.do")
+	public String setSession2(Member vo, HttpServletResponse res, String saveID) {
+		System.out.println("들어옴");
+    	Cookie id = null;
+		Cookie pw = null;
+		Cookie state = null;
+		if(vo.getPw() != null){
+			if(saveID.equals("true"))
+			{
+				System.out.println("쿠키생성");
+				id = new Cookie("userid", vo.getId());
+				pw = new Cookie("pw", vo.getPw());
+				state  = new Cookie("state", "t");
+				id.setMaxAge(60*365);
+				pw.setMaxAge(60*365);
+				state.setMaxAge(60*365);
+				res.addCookie(id);
+				res.addCookie(pw);
+				res.addCookie(state);
+			}else if(saveID.equals("false"))
+			{
+				System.out.println("저장안함");
+				state = new Cookie("state","f");
+				res.addCookie(state);
+			}
+		}
+		return "/06_etc/06_etc_accountManager";
+	}*/
 
 }

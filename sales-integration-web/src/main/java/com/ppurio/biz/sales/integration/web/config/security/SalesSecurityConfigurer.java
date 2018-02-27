@@ -6,12 +6,14 @@
 package com.ppurio.biz.sales.integration.web.config.security;
 
 import javax.annotation.Resource;
+
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 
 /**
  *
@@ -62,6 +64,7 @@ public class SalesSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .usernameParameter("empno")
                 .passwordParameter("passwd")
                 .loginProcessingUrl("/loginProc.do")
+                .defaultSuccessUrl("/account.etc")
                 .successHandler(authenticationSuccessHandler)
                 .failureHandler(authenticationFailureHandler)
                 .failureUrl("/login.do?error")
@@ -80,6 +83,12 @@ public class SalesSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .sessionCreationPolicy(SessionCreationPolicy.NEVER)
                 .and()
             .httpBasic();
+    }
+    
+    @Override
+    protected void configure(final AuthenticationManagerBuilder auth) throws Exception{
+    	auth.inMemoryAuthentication().passwordEncoder(NoOpPasswordEncoder.getInstance())
+    	.withUser("admin").password("admin123").roles("ADMIN");
     }
 
 }
