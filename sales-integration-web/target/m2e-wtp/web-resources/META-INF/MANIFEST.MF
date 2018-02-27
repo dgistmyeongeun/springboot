@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: sales-integration-web
 Implementation-Version: 0.0.1
-Built-By: user
+Built-By: Administrator
 Implementation-Vendor-Id: com.ppurio.biz
-Build-Jdk: 1.8.0_161
+Build-Jdk: 1.8.0_144
 Implementation-URL: http://projects.spring.io/spring-boot/spring-boot-
  starter-parent/sales-integration-parent/sales-integration-web/
 Created-By: Maven Integration for Eclipse
