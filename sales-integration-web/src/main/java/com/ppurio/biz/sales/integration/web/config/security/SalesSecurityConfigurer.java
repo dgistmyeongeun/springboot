@@ -7,6 +7,9 @@ package com.ppurio.biz.sales.integration.web.config.security;
 
 import javax.annotation.Resource;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -14,6 +17,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+
+import com.ppurio.biz.sales.integration.web.index.controller.IndexController;
 
 /**
  *
@@ -24,7 +29,8 @@ public class SalesSecurityConfigurer extends WebSecurityConfigurerAdapter {
     
 //    @Resource
 //    private SalesAuthenticationProvider authenticationProvider;
-
+	private static final Logger logs = LoggerFactory.getLogger(IndexController.class);
+	
     @Resource
     private SalesAuthenticationSuccessHandler authenticationSuccessHandler;
 
@@ -56,22 +62,22 @@ public class SalesSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 //.antMatchers("/sub/**")
                 //.access("hasRole('USER') and hasIpAddress('192.168.1.0/24')")
                 //.anyRequest().fullyAuthenticated()
-//                .anyRequest().authenticated()
-                .anyRequest().permitAll()
+                //.anyRequest().authenticated()
+                .anyRequest().permitAll()	//모든 사용자가 접근할 수 있다.
+            	//.antMatchers("/**").hasRole("MEMBER")
                 .and()                  
-            .formLogin()
+            .formLogin()	//form태그 기반의 로그인을 지원. 기본으로 로그인 폼 생성해줌.
                 .loginPage("/login.do").permitAll()
-                .usernameParameter("empno")
-                .passwordParameter("passwd")
-                .loginProcessingUrl("/loginProc.do")
-                .defaultSuccessUrl("/account.etc")
+                .usernameParameter("id")
+                .passwordParameter("pw")
+                //.loginProcessingUrl("/loginProc.do")
                 .successHandler(authenticationSuccessHandler)
                 .failureHandler(authenticationFailureHandler)
                 .failureUrl("/login.do?error")
                 .and()
             .logout()
                 .logoutUrl("/logout.do")
-                .logoutSuccessUrl("/")
+                .logoutSuccessUrl("/login.do")
                 .logoutSuccessHandler(logoutSuccessHandler)
                 .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID", "SESSION")
@@ -82,13 +88,17 @@ public class SalesSecurityConfigurer extends WebSecurityConfigurerAdapter {
             .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.NEVER)
                 .and()
-            .httpBasic();
+            .httpBasic()
+            	.and();
     }
     
-    @Override
-    protected void configure(final AuthenticationManagerBuilder auth) throws Exception{
-    	auth.inMemoryAuthentication().passwordEncoder(NoOpPasswordEncoder.getInstance())
+/*    @Autowired
+    protected void configureGlobal(AuthenticationManagerBuilder auth) throws Exception{
+    	
+    	logs.info("build Auth global");
+    	
+    	auth.inMemoryAuthentication()
     	.withUser("admin").password("admin123").roles("ADMIN");
-    }
+    }*/
 
 }

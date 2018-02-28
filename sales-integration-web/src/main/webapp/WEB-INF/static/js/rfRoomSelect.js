@@ -6,13 +6,19 @@ function rfchange() {
 	var varTableLastRow = varTable.find('tr:last');
 	alert(type);
 	
-	if(type="2"){
-		$(".faqfile").addClass("fade");
-		$(".popup").removeClass("fade");
-	}else{
-		$(".faqfile").removeClass("fade");
-		$(".popup").addClass("fade");
+	if(type=="1"){
+		alert("저거실행");
+		$(".faqfile").css("display", "");
+		$(".popup").css("display", "none");
 	}
+	if(type=="2"){
+		alert("이거실행");
+		$(".faqfile").css("display", "none");
+		$(".popup").css("display", "");
+
+	}
+	
+	
 	
 	
 };

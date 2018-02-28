@@ -33,5 +33,7 @@ public class WebConfiguration implements WebMvcConfigurer {
                 .addInterceptor(new CommonInterceptor())
                 .addPathPatterns("/login.do");
     }
+    
+    
 
 }

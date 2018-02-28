@@ -34,7 +34,7 @@
 <div class="container_r">
 	<!-- title -->
 	<@Title.title_m "ASP 관리">
-			<a href="">홈</a> > <a href="asp.etc">기타</a> > <a href="asp.etc">ASP 관리</a>
+			<a href="">홈</a> > <a href="asp.etc">기타 </a> > <a href="asp.etc">ASP 관리</a>
 	</@Title.title_m>
 	<!-- //title -->
 

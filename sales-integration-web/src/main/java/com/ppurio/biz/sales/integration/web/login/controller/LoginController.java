@@ -54,6 +54,11 @@ public class LoginController {
         return "/login/00_login";
     }
     
+    @PostMapping("/logout.do")
+    public void logout() {
+    	
+    }
+    
   /*  @PostMapping(value="loginProc.do")
 	public String setSession2(Member vo, HttpServletResponse res, String saveID) {
 		System.out.println("들어옴");

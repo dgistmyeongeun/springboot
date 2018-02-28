@@ -2,7 +2,11 @@
 <#import "../etcLayout/account_etc_table.ftl" as accountEtc>
 <#import "../layout/title.ftl" as Title>
 <#assign pageTitle='기타 - 정산담당자 정보입력' />
-
+<style>
+@media only screen and (min-width : 321px) and (max-width : 600px) {
+			
+                .txt_info{background-color: blue;} 
+        </style>
 <@page.base pageTitle>
     <!-- contents -->
     <div class="container_r">    
@@ -40,7 +44,7 @@
 		</div>
 
 		<!-- 하단 버튼 -->
-		<#include "../layout/bottom.ftl">
+		<@Title.botton_m_center "확인" "#" "#" />
 		<!-- //하단 버튼 -->		
 	</div>
 	<!-- //contents -->

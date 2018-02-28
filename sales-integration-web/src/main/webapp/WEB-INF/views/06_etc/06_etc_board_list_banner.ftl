@@ -54,66 +54,18 @@
 				</tr>
 			</thead>
 			<tbody>
+			<#list bannerlist as banner>
 				<tr>
-					<td>IP변경 안내</td>
+					<td>${banner.title }</td>
 					<td><a href="" class="btn_sm_skyBlue">미리보기</a></td>
-					<td>https://www.ufit.co.kr/ufitsms/kakaobiz</td>
-					<td>Y</td>
-					<td>1</td>
-					<td>2017.05.12</td>
+					<td>${banner.url }</td>
+					<td>${banner.yesno }</td>
+					<td>${banner.seq }</td>
+					<td>${banner.regdate?string("yyyy-MM-dd") }</td>
 					<td><a href="" class="btn_sm_skyBlue">수정</a></td>
 					<td><input type="checkbox"></td>
 				</tr>
-				<tr>
-					<td>카카오톡 비즈메시지</td>
-					<td><a href="" class="btn_sm_skyBlue">미리보기</a></td>
-					<td>-</td>
-					<td>Y</td>
-					<td>2</td>
-					<td>2017.05.12</td>
-					<td><a href="" class="btn_sm_skyBlue">수정</a></td>
-					<td><input type="checkbox"></td>
-				</tr>
-				<tr>
-					<td>IP변경 안내</td>
-					<td><a href="" class="btn_sm_skyBlue">미리보기</a></td>
-					<td>https://www.ufit.co.kr/ufitsms/kakaobiz</td>
-					<td>Y</td>
-					<td>1</td>
-					<td>2017.05.12</td>
-					<td><a href="" class="btn_sm_skyBlue">수정</a></td>
-					<td><input type="checkbox"></td>
-				</tr>
-				<tr>
-					<td>카카오톡 비즈메시지</td>
-					<td><a href="" class="btn_sm_skyBlue">미리보기</a></td>
-					<td>-</td>
-					<td>Y</td>
-					<td>2</td>
-					<td>2017.05.12</td>
-					<td><a href="" class="btn_sm_skyBlue">수정</a></td>
-					<td><input type="checkbox"></td>
-				</tr>				
-				<tr>
-					<td>IP변경 안내</td>
-					<td><a href="" class="btn_sm_skyBlue">미리보기</a></td>
-					<td>https://www.ufit.co.kr/ufitsms/kakaobiz</td>
-					<td>Y</td>
-					<td>1</td>
-					<td>2017.05.12</td>
-					<td><a href="" class="btn_sm_skyBlue">수정</a></td>
-					<td><input type="checkbox"></td>
-				</tr>
-				<tr>
-					<td>카카오톡 비즈메시지</td>
-					<td><a href="" class="btn_sm_skyBlue">미리보기</a></td>
-					<td>-</td>
-					<td>Y</td>
-					<td>2</td>
-					<td>2017.05.12</td>
-					<td><a href="" class="btn_sm_skyBlue">수정</a></td>
-					<td><input type="checkbox"></td>
-				</tr>												
+			</#list>									
 			</tbody>
 		</table>
 		

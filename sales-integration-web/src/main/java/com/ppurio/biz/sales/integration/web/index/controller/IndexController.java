@@ -5,16 +5,16 @@
  */
 package com.ppurio.biz.sales.integration.web.index.controller;
 
-import com.ppurio.biz.sales.integration.commons.util.GoogleOTP;
-
-import freemarker.template.Configuration;
-
 import javax.annotation.Resource;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.ppurio.biz.sales.integration.commons.util.GoogleOTP;
 
 /**
  *
@@ -32,11 +32,16 @@ public class IndexController {
      */
     
     
-    @GetMapping("/index.do")
+    @RequestMapping("/")
     String root() {
-        return "/etc/accountManager";
+        return "/06_etc/06_etc_aspManagement";
     }
     
+ /*   @PostMapping("/")
+    String rootpost() {
+        return "/06_etc/06_etc_aspManagement";
+    }
+    */
     
     
 

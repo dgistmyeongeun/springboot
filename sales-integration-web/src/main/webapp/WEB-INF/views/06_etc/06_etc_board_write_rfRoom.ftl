@@ -73,7 +73,7 @@
 							<!-- //게시판 에디터 자리 -->
 						</td>
 					</tr>
-					<div class="faqfile">
+					<div id="faqfile">
 						<tr class="changeArea_m">
 							<th>첨부파일</th>
 							<td colspan="5">
@@ -85,8 +85,8 @@
 							<td colspan="5"><input type="checkbox"></td>
 						</tr>
 					</div>
-					<div class="popup fade">
-						<tr class="changeArea_m">
+					<div id="popup" style="display:none;">
+						<tr>
 							<th>최상위 노출</th>
 							<td colspan="5"><input type="checkbox"></td>
 						</tr>
@@ -110,13 +110,13 @@
 								<label for="heightInput">세로 <input type="text" name="widthInput" id="heightInput" class="w100"></label> <span>px</span>
 							</td>
 						</tr>
-				</div>
+					</div>
 				</tbody> 			
 			</table>
 		<!-- //table -->
 		
 		<!-- 하단 버튼 -->
-		<@Title.bottom_m "등록" />
+		<@Title.botton_m_center "등록" "#" "#" />
 		<!-- //하단 버튼 -->
 		
 	</div>

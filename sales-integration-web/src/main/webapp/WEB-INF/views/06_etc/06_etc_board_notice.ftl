@@ -26,10 +26,7 @@
 		<!-- //검색 -->
 		
 		<!-- button -->
-		<div class="align_r mb_15">
-			<a href="writenotice.etc" class="btn md btn_blue">등록</a>
-			<a href="" class="btn md btn_gray">삭제</a>
-		</div>
+		<@Title.botton_m_right "등록" "writenotice.etc"/>
 		<!-- //button -->
 		
 		<div class="scroll h300">
@@ -67,114 +64,19 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>130</td>
-						<td>유핏</td>
-						<td>공지</td>
-						<td>정책 안내</td>
-						<td>[공지] Ufit 이용약관 개정 안내</td>
-						<td>2018.02.25</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>130</td>
-						<td>비즈뿌리오</td>
-						<td>팝업</td>
-						<td>정책 안내</td>
-						<td>Ufit GW (DUO) 장비 교체 작업 공지</td>
-						<td>2018.02.25</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>130</td>
-						<td>전체</td>
-						<td>팝업</td>
-						<td>이벤트 안내</td>
-						<td>[룰렛이벤트] 100% 당첨!!</td>
-						<td>2018.02.25</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>130</td>
-						<td>유핏</td>
-						<td>팝업</td>
-						<td>기타</td>
-						<td>[안내]불법스팸 방지 및 인식제고를 위한 설명회 개최 안내</td>
-						<td>2018.02.25</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>130</td>
-						<td>유핏</td>
-						<td>공지</td>
-						<td>정책 안내</td>
-						<td>[공지] Ufit 이용약관 개정 안내</td>
-						<td>2018.02.25</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>130</td>
-						<td>비즈뿌리오</td>
-						<td>팝업</td>
-						<td>정책 안내</td>
-						<td>Ufit GW (DUO) 장비 교체 작업 공지</td>
-						<td>2018.02.25</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>130</td>
-						<td>전체</td>
-						<td>팝업</td>
-						<td>이벤트 안내</td>
-						<td>[룰렛이벤트] 100% 당첨!!</td>
-						<td>2018.02.25</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>130</td>
-						<td>유핏</td>
-						<td>팝업</td>
-						<td>기타</td>
-						<td>[안내]불법스팸 방지 및 인식제고를 위한 설명회 개최 안내</td>
-						<td>2018.02.25</td>
-						<td><input type="checkbox"></td>
-					</tr>												
-					<tr>
-						<td>130</td>
-						<td>유핏</td>
-						<td>공지</td>
-						<td>정책 안내</td>
-						<td>[공지] Ufit 이용약관 개정 안내</td>
-						<td>2018.02.25</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>130</td>
-						<td>비즈뿌리오</td>
-						<td>팝업</td>
-						<td>정책 안내</td>
-						<td>Ufit GW (DUO) 장비 교체 작업 공지</td>
-						<td>2018.02.25</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>130</td>
-						<td>전체</td>
-						<td>팝업</td>
-						<td>이벤트 안내</td>
-						<td>[룰렛이벤트] 100% 당첨!!</td>
-						<td>2018.02.25</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>130</td>
-						<td>유핏</td>
-						<td>팝업</td>
-						<td>기타</td>
-						<td>[안내]불법스팸 방지 및 인식제고를 위한 설명회 개최 안내</td>
-						<td>2018.02.25</td>
-						<td><input type="checkbox"></td>
-					</tr>																													
+					<#list 1..2 as i>
+						<#list slist as s>
+						<tr>
+							<td>130</td>
+							<td>유핏</td>
+							<td>공지</td>
+							<td>정책 안내</td>
+							<td>${s }</td>
+							<td>2018.02.25</td>
+							<td><input type="checkbox"></td>
+						</tr>
+						</#list>
+					</#list>																			
 				</tbody>
 			</table>
 		</div>

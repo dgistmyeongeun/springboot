@@ -5,7 +5,6 @@
  */
 package com.ppurio.biz.sales.integration.web.controller;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -24,8 +23,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ppurio.biz.sales.integration.web.Entity.Banner;
 import com.ppurio.biz.sales.integration.web.Entity.FAQEntity;
+import com.ppurio.biz.sales.integration.web.Entity.OnlineEntity;
 import com.ppurio.biz.sales.integration.web.Entity.SpamEntity;
+
 
 @Controller
 public class EtcController {
@@ -103,7 +105,14 @@ public class EtcController {
    //------------------게시물 관리-----------------------
    //공지 팝업
    @GetMapping(value="/notice.etc")
-   public String boardNotice() {
+   public String boardNotice(Model model) {
+	   ArrayList<String> slist = new ArrayList<>();
+	   slist.add("[공지] Ufit 이용약관 개정 안내");
+	   slist.add("Ufit GW (DUO) 장비 교체 작업 공지");
+	   slist.add("[룰렛이벤트] 100% 당첨!");
+	   slist.add("[안내]불법스팸 방지 및 인식제고를 위한 설명회 개최 안내");
+	   
+	   model.addAttribute("slist", slist);
 	   return "/06_etc/06_etc_board_notice";
    }
    
@@ -138,10 +147,17 @@ public class EtcController {
 	   return "/06_etc/06_etc_board_write_faq";
    }
    
-   
    //온라인상담
-   @GetMapping(value="/online.etc")
-   public String online() {
+   @GetMapping(value="online.etc")
+   public String online(Model model) {
+	   List<OnlineEntity> onlinelist = new ArrayList<>();
+	   Date now = new Date();
+	   int qid=130;
+	   while(qid<140) {
+		   onlinelist.add(new OnlineEntity(qid++, "MSG2", "비즈뿌리오", "daou", "다우기술", "윤수지", "메세지발송", "알림톡 발송 가이드" , now, "윤수진", "미처리"));
+		   onlinelist.add(new OnlineEntity(qid++, "MSG2", "비즈뿌리오", "daou", "다우기술", "윤수지", "메세지발송", "알림톡 발송 가이드" , now, "김현진", "미처리"));
+	   }
+	   model.addAttribute("onlinelist", onlinelist);
 	   return "/06_etc/06_etc_board_list_online";
    }
    //온라인상담-write
@@ -157,7 +173,16 @@ public class EtcController {
    
    //베너:추가
    @GetMapping(value="/banner.etc")
-   public String banner() {
+   public String banner(Model model) {
+	   List<Banner> bannerlist = new ArrayList<>();
+	   Calendar cal = new GregorianCalendar(2017,6,16);
+	   Date date = cal.getTime();
+	   
+	   for(int i=0; i<3; i++) {
+		   bannerlist.add(new Banner("IP변경 안내", "https://www.ufit.co.kr/ufitsms/kakaobiz", "Y", 1, date));
+		   bannerlist.add(new Banner("카카오톡 비즈메시지", "-", "Y", 2, date));
+	   }
+	   model.addAttribute("bannerlist", bannerlist);
 	   return "/06_etc/06_etc_board_list_banner";
    }
 

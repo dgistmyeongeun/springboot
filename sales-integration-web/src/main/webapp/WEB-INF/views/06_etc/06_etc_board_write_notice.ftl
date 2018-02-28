@@ -85,7 +85,7 @@
 
 				
 		<!-- 하단 버튼 -->
-		<@Title.bottom_m "등록" />
+		<@Title.botton_m_center "등록" "#" "#"/>
 		<!-- //하단 버튼 -->
 	</div>
 	<!-- //contents -->

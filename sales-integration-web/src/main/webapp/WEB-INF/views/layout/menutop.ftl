@@ -73,6 +73,11 @@
 					</ul>
 				</li>
 			</ul>
-			<div class="btn_box"><!--<a href="#" class="pw mr_3">비밀번호</a>--><a href="#" class="logout">로그아웃</a></div>
+			<div class="btn_box">
+				<form method="post" action="/login.do">
+					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+					<a herf="#" class="logout" ><button type="submit">로그아웃</button></a>
+				</form>
+			</div>
 		</div>
     </div>
