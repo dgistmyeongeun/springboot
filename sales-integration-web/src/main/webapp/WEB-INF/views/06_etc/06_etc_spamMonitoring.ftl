@@ -71,126 +71,22 @@
 				</tr>
 			</thead>
 			<tbody>
+			<#list spamlist as spamlist>
 				<tr>
 					<td><input type="checkbox"></td>
-					<td>2017-11-30</td>
-					<td>2017-12-31 23:33:11</td>
-					<td>5건</td>
-					<td>BIZ5</td>
-					<td>daou_3</td>
-					<td>010-1234-5678</td>
-					<td>010***56789</td>
-					<td>[Web발신}☆사랑하는☆</td>
-					<td>-</td>					
+					<td>${spamlist.requestDate?string("yyyy-MM-dd")}</td>
+					<td>${spamlist.responseDate?string("yyyy-MM-dd HH:mm:ss")} </td>
+					<td>${spamlist.count }건</td>
+					<td>${spamlist.zone }</td>
+					<td>${spamlist.id}</td>
+					<td>${spamlist.fromNum }</td>
+					<td>${spamlist.toNum }</td>
+					<td>${spamlist.msg }</td>
+					<td>-</td>
 				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>2017-11-30</td>
-					<td>2017-12-31 23:33:11</td>
-					<td>5건</td>
-					<td>BIZ5</td>
-					<td>daou_3</td>
-					<td>010-1234-5678</td>
-					<td>010***56789</td>
-					<td>[Web발신}☆사랑하는☆</td>
-					<td>-</td>					
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>2017-11-30</td>
-					<td>2017-12-31 23:33:11</td>
-					<td>5건</td>
-					<td>BIZ5</td>
-					<td>daou_3</td>
-					<td>010-1234-5678</td>
-					<td>010***56789</td>
-					<td>[Web발신}☆사랑하는☆</td>
-					<td>-</td>					
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>2017-11-30</td>
-					<td>2017-12-31 23:33:11</td>
-					<td>5건</td>
-					<td>BIZ5</td>
-					<td>daou_3</td>
-					<td>010-1234-5678</td>
-					<td>010***56789</td>
-					<td>[Web발신}☆사랑하는☆</td>
-					<td>-</td>					
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>2017-11-30</td>
-					<td>2017-12-31 23:33:11</td>
-					<td>5건</td>
-					<td>BIZ5</td>
-					<td>daou_3</td>
-					<td>010-1234-5678</td>
-					<td>010***56789</td>
-					<td>[Web발신}☆사랑하는☆</td>
-					<td>-</td>					
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>2017-11-30</td>
-					<td>2017-12-31 23:33:11</td>
-					<td>5건</td>
-					<td>BIZ5</td>
-					<td>daou_3</td>
-					<td>010-1234-5678</td>
-					<td>010***56789</td>
-					<td>[Web발신}☆사랑하는☆</td>
-					<td>-</td>					
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>2017-11-30</td>
-					<td>2017-12-31 23:33:11</td>
-					<td>5건</td>
-					<td>BIZ5</td>
-					<td>daou_3</td>
-					<td>010-1234-5678</td>
-					<td>010***56789</td>
-					<td>[Web발신}☆사랑하는☆</td>
-					<td>-</td>					
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>2017-11-30</td>
-					<td>2017-12-31 23:33:11</td>
-					<td>5건</td>
-					<td>BIZ5</td>
-					<td>daou_3</td>
-					<td>010-1234-5678</td>
-					<td>010***56789</td>
-					<td>[Web발신}☆사랑하는☆</td>
-					<td>-</td>					
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>2017-11-30</td>
-					<td>2017-12-31 23:33:11</td>
-					<td>5건</td>
-					<td>BIZ5</td>
-					<td>daou_3</td>
-					<td>010-1234-5678</td>
-					<td>010***56789</td>
-					<td>[Web발신}☆사랑하는☆</td>
-					<td>-</td>					
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>2017-11-30</td>
-					<td>2017-12-31 23:33:11</td>
-					<td>5건</td>
-					<td>BIZ5</td>
-					<td>daou_3</td>
-					<td>010-1234-5678</td>
-					<td>010***56789</td>
-					<td>[Web발신}☆사랑하는☆</td>
-					<td>-</td>					
-				</tr>				
+				</#list>
+				
+				
 			</tbody>
 		</table>
 		<!-- //table -->

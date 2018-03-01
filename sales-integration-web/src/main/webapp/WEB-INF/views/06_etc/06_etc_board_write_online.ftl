@@ -104,7 +104,7 @@
 		</table>
 		
 		<!-- 하단 버튼 -->
-		<@Title.botton_m_center "등록" "#" "#"/>
+		<@Title.button_m_center "등록" "#" "#"/>
 		<!-- //하단 버튼 -->
 		
 	</div>

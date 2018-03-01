@@ -32,17 +32,16 @@
 				<button title="마지막페이지" class="last" type="button">&gt;&gt;</button>
 			</span>
 		</div>
-		
 </#macro>
 
-<#macro botton_m_center ok okMove closeMove>
+<#macro button_m_center ok okMove closeMove>
 <div class="btn_area mb_15 clr" >
 	<a href="${okMove}" class="btn lg btn_blue">${ok}</a>
 	<a href="${closeMove}" class="btn lg btn_gray">취소</a>
 </div>
 </#macro>
 
-<#macro botton_m_right ok okMove>
+<#macro button_m_right ok okMove>
 <div class="align_r mb_15">
 	<a href="${okMove}" class="btn md btn_blue">${ok}</a>
 	<a href="#" class="btn md btn_gray">삭제</a>

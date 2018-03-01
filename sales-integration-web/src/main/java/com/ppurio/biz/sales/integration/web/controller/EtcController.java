@@ -38,6 +38,8 @@ public class EtcController {
     List<FAQEntity> faqlist = new ArrayList<>();
     List<SpamEntity> spamlist = new ArrayList<>();
     
+
+    
    //전산담당자 정보 입력
    @RequestMapping(value="/account.etc")
    public String accountManage() {
@@ -85,19 +87,20 @@ public class EtcController {
    
    //스팸모니터링
    @GetMapping(value="/spam.etc")
-   public String spam() {
-	   return "/06_etc/06_etc_spamMonitoring";
-   }
-   
-   //스팸모니터링-히스토리
-   @GetMapping(value="/spamreport.etc")
-   public String spamReport(HttpServletRequest request, Model model) {
+   public String spam (Model model) {
 	   Date now = new Date();
 	   Calendar cal = new GregorianCalendar(2017,7,16);
 	   Date date = cal.getTime();
 	   for(int i=0; i<10; i++) 
 		   spamlist.add(new SpamEntity(date ,now, 5, "B125", "daou_3", "01012345678", "010****1234", "[Web발신}☆사랑하는☆ …"));
 	   
+	   model.addAttribute("spamlist", spamlist);
+	   return "/06_etc/06_etc_spamMonitoring";
+   }
+   
+   //스팸모니터링-히스토리
+   @GetMapping(value="/spamreport.etc")
+   public String spamReport(HttpServletRequest request, Model model) {
 	   model.addAttribute("spamlist", spamlist);
 	   return "/06_etc/06_etc_spamMonitoring_reportHistory";
    }

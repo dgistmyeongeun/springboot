@@ -1,8 +1,8 @@
 <#import "../layout/sidebar_statistics.ftl" as page>
-<#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 슬라이드바' />
-
-<@page.base pageTitle>
+<#assign pageScript='/include/common-script.ftl' />
+<#assign pageStyle='/include/common-styleBoot.ftl' />
+<@page.base pageTitle baseScript pageStyle>
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->

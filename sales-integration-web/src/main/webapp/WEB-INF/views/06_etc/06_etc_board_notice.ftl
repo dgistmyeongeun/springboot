@@ -26,7 +26,7 @@
 		<!-- //검색 -->
 		
 		<!-- button -->
-		<@Title.botton_m_right "등록" "writenotice.etc"/>
+		<@Title.button_m_right "등록" "writenotice.etc"/>
 		<!-- //button -->
 		
 		<div class="scroll h300">

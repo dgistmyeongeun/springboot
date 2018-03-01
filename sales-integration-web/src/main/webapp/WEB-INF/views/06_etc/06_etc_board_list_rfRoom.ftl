@@ -26,7 +26,7 @@
 		<!-- //검색 -->
 		
 		<!-- button -->
-		<@Title.botton_m_right "등록" "write_rfRoom.etc"/>
+		<@Title.button_m_right "등록" "write_rfRoom.etc"/>
 		<!-- //button -->
 		
 						

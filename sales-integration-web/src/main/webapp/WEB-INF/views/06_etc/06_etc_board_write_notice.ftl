@@ -1,6 +1,7 @@
 <#import "../layout/sidebar_etc.ftl" as page>
 <#import "../layout/title.ftl" as Title>
-<#assign pageTitle='영업관리시스템 - 슬라이드바' />
+
+<#assign pageTitle='영업관리시스템 - 공지/팝업' />
 
 <@page.base pageTitle>
    
@@ -71,24 +72,47 @@
 							<!-- //게시판 에디터 자리 -->
 						</td>
 					</tr>
-					<tr class='test'>
+					<tr class='m_recheck'>
 						<th>최상위 노출</th>
 						<td colspan="5">
-							<label for="noticeCheck"><input type="checkbox" id="noticeCheck" name="noticeCheck"> 
+							<label for="noticeCheck"><input type="checkbox" id="noticeCheck" name="noticeCheck" class="noticeCheck"> 
 								<span class="red">* 체크 시 공지사항 최상단에 노출됩니다.</span>
 							</label>
 						</td>
 					</tr>
+					
+					<!-- 06_etc_board_write_popup 내용 -->
+					<tr class="m_check" style="display:none;">
+					<th><b class="txt_c_red">*</b> 노출 여부</th>
+						<td colspan="5">
+							<label for="yesRadios"><input type="radio" id="yesRadios" name="yesnoRadios" checked="" class="mr_3 noticeRedio" value="yes"> 예</label>
+							<label for="noRadios"><input type="radio" id="noRadios" name="yesnoRadios" class="ml_20 mr_3 noticeRedio" value="no"> 아니오</label>						
+						</td>
+					</tr>				
+					<tr class="m_check" style="display:none;">
+						<th><b class="txt_c_red">*</b> 노출 기간</th>
+						<td colspan="5">
+							<input type="text" class="w100"><button class="calendar"></button>~ <input type="text" class="w100"><button class="calendar"></button>
+						</td>
+					</tr>
+					<tr class="m_check" style="display:none;">
+						<th><b class="txt_c_red">*</b> 팝업 사이즈</th>
+						<td colspan="5">
+							<label for="widthInput">가로 <input type="text" name="widthInput" id="widthInput" class="w100"></label> <span class="ml_3 mr_15" >px</span>
+							<label for="heightInput">세로 <input type="text" name="widthInput" id="heightInput" class="w100"></label> <span>px</span>
+						</td>
+					</tr>
+					</span>
 				</tbody>				
 			</table>
 		<!-- //table -->
 
 				
 		<!-- 하단 버튼 -->
-		<@Title.botton_m_center "등록" "#" "#"/>
+		<@Title.button_m_center "등록" "#" "#"/>
 		<!-- //하단 버튼 -->
 	</div>
 	<!-- //contents -->
 	
-	
+	<script type="text/javascript" src="js/checkbox.js"></script>
 </@page.base>

@@ -56,13 +56,7 @@
 		</table>
 		
 		<!-- 검색 -->
-		<div class="box_grey box_search">
-			<p class="align_c">
-				<label class="bul">제목</label>
-				<input id="input1" type="text" placeholder="검색 내용 입력" class="w200">
-				<a href="#" class="btn_sm_sch_black r3">검색</a>
-			</p>
-		</div>
+		<@Title.search_m />
 		<!-- //검색 -->
 		
 		<div class="scroll h400">

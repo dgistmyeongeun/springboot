@@ -73,14 +73,14 @@ jQuery( function($) { // HTML 문서를 모두 읽으면 포함한 코드를 실
 		<div class="login_box">
 			<div class="form">
 				<form class="login_form" method="post" action="/">
-					<p><label for="id" class="id_b">아이디</label>
-					<input type="text" id="id" name="id" class="pw_b" placeholder="아이디"/></p>
-					<p><label for="pw">비밀번호</label>
-					<input type="password" id="pw" name="pw" placeholder="비밀번호"/></p>
+					<p><label for="empno" class="id_b">아이디</label>
+					<input type="text" id="empno" name="empno" class="pw_b" placeholder="아이디"/></p>
+					<p><label for="passwd">비밀번호</label>
+					<input type="password" id="passwd" name="passwd" placeholder="비밀번호"/></p>
 					<span class="mb_15"><label><input type="checkbox" value="" id="saveID"> 아이디 저장</label></span>
 					<p><label for="otp">OTP</label>
 					<input type="text" id="otp" class="pw_b" placeholder="OTP"/></p>
-					<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }"/>
+					<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
 					<div class="btn_box"><button class="login" type="submit">로그인</button></div>     
 				</form>                
 			</div>

@@ -42,8 +42,8 @@
 						<th>구분</th>
 						<td>
 							<select class="w150 rf" onchange="rfchange()">
-								<option value="1" class='tt'>자료실</option>
-								<option value="2" class='ttt'>FAQ</option>
+								<option value="1" >자료실</option>
+								<option value="2" >FAQ</option>
 							</select>
 						</td>
 						<th>서비스</th>
@@ -73,52 +73,39 @@
 							<!-- //게시판 에디터 자리 -->
 						</td>
 					</tr>
-					<div id="faqfile">
-						<tr class="changeArea_m">
+						<!-- 06_etc_board_write_rfRoom.ftl 부분:자료실 선택 시 -->
+						<tr class="rfroom_m">
 							<th>첨부파일</th>
 							<td colspan="5">
 								<input type="file" class="w300 mr_5">
 							</td>
 						</tr>
-						<tr class="changeArea_m">
+						<tr class="rfroom_m">
 							<th>최상위 노출</th>
 							<td colspan="5"><input type="checkbox"></td>
 						</tr>
-					</div>
-					<div id="popup" style="display:none;">
-						<tr>
+						
+						<!-- 06_etc_board_write_faq.ftl 부분:FAQ선택시 -->
+						<tr class="faq_m" style="display:none;">
 							<th>최상위 노출</th>
 							<td colspan="5"><input type="checkbox"></td>
 						</tr>
-						<tr>
+						<tr class="faq_m" style="display:none;">
 							<th><b class="txt_c_red">*</b> 노출 여부</th>
 							<td colspan="5">
 								<label for="yesRadios"><input type="radio" id="yesRadios" name="yesRadios" checked="" class="mr_3"> 예</label>
 								<label for="noRadios"><input type="radio" id="noRadios" name="noRadios" class="ml_20 mr_3"> 아니오</label>						
 							</td>
-						</tr>				
-						<tr>
-							<th><b class="txt_c_red">*</b> 노출 기간</th>
-							<td colspan="5">
-								<input type="text" class="w100"><button class="calendar"></button>~ <input type="text" class="w100"><button class="calendar"></button>
-							</td>
-						</tr>
-						<tr>
-							<th><b class="txt_c_red">*</b> 팝업 사이즈</th>
-							<td colspan="5">
-								<label for="widthInput">가로 <input type="text" name="widthInput" id="widthInput" class="w100"></label> <span class="ml_3 mr_15" >px</span>
-								<label for="heightInput">세로 <input type="text" name="widthInput" id="heightInput" class="w100"></label> <span>px</span>
-							</td>
-						</tr>
-					</div>
+						</tr>			
 				</tbody> 			
 			</table>
 		<!-- //table -->
 		
 		<!-- 하단 버튼 -->
-		<@Title.botton_m_center "등록" "#" "#" />
+		<@Title.button_m_center "등록" "#" "#" />
 		<!-- //하단 버튼 -->
 		
 	</div>
 	<!-- //contents -->
+	<script type="text/javascript" src="js/rfRoomSelect.js"></script>
 </@page.base>

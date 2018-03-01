@@ -7,11 +7,9 @@
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
-    	<div class="title_b">
-    		<em></em>
-    		<h2>예약발송 취소</h2>
-			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="">기타</a> > <a href="">예약발송 취소</a></blockquote>
-		</div>
+    	<@Title.title_m "예약발송 취소">
+			<a href="">홈</a> > <a href="asp.etc">기타</a> > <a href="reservation.etc">예약발송 취소</a>
+		</@Title.title_m>
 		<!-- //title -->
 		
 		<!-- message -->
@@ -63,16 +61,13 @@
 			<!-- table -->
 			<table class="tb_list_b">
 				<colgroup>
-					<col style="width:9%">
-					<col style="width:9%">
-					<col style="width:9%">
-					<col style="width:9%">
-					<col style="width:9%">
-					<col style="width:9%">
-					<col style="width:9%">
-					<col style="width:12%">
-					<col style="width:9%">
-					<col style="width:9%">
+					<#list 1..10 as i>
+						<#if i=8>
+							<col style="width:12%">
+						<#else>
+							<col style="width:9%">
+						</#if>
+					</#list>
 					<col style="width:6%">
 				</colgroup>
 				<thead>
@@ -95,6 +90,7 @@
 					</tr>
 				</thead>
 				<tbody>
+				<#list 1..10 as i>
 					<tr>
 						<td>20170803_1045</td>
 						<td>sjcom</td>
@@ -104,127 +100,16 @@
 						<td>LMS</td>
 						<td>1,300</td>
 						<td>생일축하 본발송</td>
-						<td>취소 가능</td>
-						<td>-</td>
+						<#if i=6 || i=7 || i=10>
+							<td>취소 완료</td>
+							<td>배수지</td>
+						<#else>
+							<td>취소 가능</td>
+							<td>-</td>
+						</#if>
 						<td><input type="checkbox"></td>
 					</tr>
-					<tr>
-						<td>20170803_1045</td>
-						<td>sjcom</td>
-						<td>수지닷컴</td>
-						<td>MSG2</td>
-						<td>윤수지</td>
-						<td>LMS</td>
-						<td>1,300</td>
-						<td>생일축하 본발송</td>
-						<td>취소 가능</td>
-						<td>-</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>20170803_1045</td>
-						<td>sjcom</td>
-						<td>수지닷컴</td>
-						<td>MSG2</td>
-						<td>윤수지</td>
-						<td>LMS</td>
-						<td>1,300</td>
-						<td>생일축하 본발송</td>
-						<td>취소 가능</td>
-						<td>-</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>20170803_1045</td>
-						<td>sjcom</td>
-						<td>수지닷컴</td>
-						<td>MSG2</td>
-						<td>윤수지</td>
-						<td>LMS</td>
-						<td>1,300</td>
-						<td>생일축하 본발송</td>
-						<td>취소 가능</td>
-						<td>-</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>20170803_1045</td>
-						<td>sjcom</td>
-						<td>수지닷컴</td>
-						<td>MSG2</td>
-						<td>윤수지</td>
-						<td>LMS</td>
-						<td>1,300</td>
-						<td>생일축하 본발송</td>
-						<td>취소 가능</td>
-						<td>-</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>20170803_1045</td>
-						<td>sjcom</td>
-						<td>수지닷컴</td>
-						<td>MSG2</td>
-						<td>윤수지</td>
-						<td>LMS</td>
-						<td>1,300</td>
-						<td>생일축하 본발송</td>
-						<td>취소 완료</td>
-						<td>배수지</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>20170803_1045</td>
-						<td>sjcom</td>
-						<td>수지닷컴</td>
-						<td>MSG2</td>
-						<td>윤수지</td>
-						<td>LMS</td>
-						<td>1,300</td>
-						<td>생일축하 본발송</td>
-						<td>취소 완료</td>
-						<td>배수지</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>20170803_1045</td>
-						<td>sjcom</td>
-						<td>수지닷컴</td>
-						<td>MSG2</td>
-						<td>윤수지</td>
-						<td>LMS</td>
-						<td>1,300</td>
-						<td>생일축하 본발송</td>
-						<td>취소 가능</td>
-						<td>-</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>20170803_1045</td>
-						<td>sjcom</td>
-						<td>수지닷컴</td>
-						<td>MSG2</td>
-						<td>윤수지</td>
-						<td>LMS</td>
-						<td>1,300</td>
-						<td>생일축하 본발송</td>
-						<td>취소 가능</td>
-						<td>-</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>20170803_1045</td>
-						<td>sjcom</td>
-						<td>수지닷컴</td>
-						<td>MSG2</td>
-						<td>윤수지</td>
-						<td>LMS</td>
-						<td>1,300</td>
-						<td>생일축하 본발송</td>
-						<td>취소 완료</td>
-						<td>배수지</td>
-						<td><input type="checkbox"></td>
-					</tr>					
+				</#list>
 				</tbody>
 			</table>
 			<!-- //table -->

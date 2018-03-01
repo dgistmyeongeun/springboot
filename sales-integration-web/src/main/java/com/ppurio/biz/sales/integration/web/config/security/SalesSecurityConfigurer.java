@@ -66,18 +66,18 @@ public class SalesSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .anyRequest().permitAll()	//모든 사용자가 접근할 수 있다.
             	//.antMatchers("/**").hasRole("MEMBER")
                 .and()                  
-            .formLogin()	//form태그 기반의 로그인을 지원. 기본으로 로그인 폼 생성해줌.
+            .formLogin()
                 .loginPage("/login.do").permitAll()
-                .usernameParameter("id")
-                .passwordParameter("pw")
-                //.loginProcessingUrl("/loginProc.do")
+                .usernameParameter("empno")
+                .passwordParameter("passwd")
+                .loginProcessingUrl("/loginProc.do")
                 .successHandler(authenticationSuccessHandler)
                 .failureHandler(authenticationFailureHandler)
                 .failureUrl("/login.do?error")
                 .and()
             .logout()
                 .logoutUrl("/logout.do")
-                .logoutSuccessUrl("/login.do")
+                .logoutSuccessUrl("/")
                 .logoutSuccessHandler(logoutSuccessHandler)
                 .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID", "SESSION")
@@ -88,8 +88,7 @@ public class SalesSecurityConfigurer extends WebSecurityConfigurerAdapter {
             .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.NEVER)
                 .and()
-            .httpBasic()
-            	.and();
+            .httpBasic();
     }
     
 /*    @Autowired

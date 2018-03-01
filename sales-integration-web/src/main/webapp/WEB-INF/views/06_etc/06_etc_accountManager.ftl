@@ -44,7 +44,7 @@
 		</div>
 
 		<!-- 하단 버튼 -->
-		<@Title.botton_m_center "확인" "#" "#" />
+		<@Title.button_m_center "확인" "#" "#" />
 		<!-- //하단 버튼 -->		
 	</div>
 	<!-- //contents -->

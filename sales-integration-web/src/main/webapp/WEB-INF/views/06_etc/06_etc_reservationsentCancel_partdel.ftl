@@ -8,11 +8,9 @@
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
-    	<div class="title_b">
-    		<em></em>
-    		<h2>예약발송 취소</h2>
-			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="">기타</a> > <a href="">예약발송 취소</a></blockquote>
-		</div>
+    	<@Title.title_m "예약발송 취소">
+			<a href="">홈</a> > <a href="asp.etc">기타</a> > <a href="reservationPart.etc">예약발송 취소</a>
+		</@Title.title_m >
 		<!-- //title -->
 		
 		<!-- message -->
@@ -28,14 +26,9 @@
 		<!-- 예약발송 취소 정보 -->
 		<table class="tb_list_b">
 			<colgroup>
+			<#list 1..8 as i>
 				<col style="width:12.5%">
-				<col style="width:12.5%">
-				<col style="width:12.5%">
-				<col style="width:12.5%">
-				<col style="width:12.5%">
-				<col style="width:12.5%">
-				<col style="width:12.5%">
-				<col style="width:12.5%">
+			</#list >
 			</colgroup>
 			<thead>
 				<tr>
@@ -102,66 +95,14 @@
 					</tr>
 				</thead>
 				<tbody>
+				<#list 1..10 as i>
 					<tr>
 						<td>benefi_D39168575700412603484</td>
 						<td>010****9999</td>
 						<td>010****5678</td>
 						<td><input type="checkbox"></td>
 					</tr>
-					<tr>
-						<td>benefi_D39168575700412603484</td>
-						<td>010****9999</td>
-						<td>010****5678</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>benefi_D39168575700412603484</td>
-						<td>010****9999</td>
-						<td>010****5678</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>benefi_D39168575700412603484</td>
-						<td>010****9999</td>
-						<td>010****5678</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>benefi_D39168575700412603484</td>
-						<td>010****9999</td>
-						<td>010****5678</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>benefi_D39168575700412603484</td>
-						<td>010****9999</td>
-						<td>010****5678</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>benefi_D39168575700412603484</td>
-						<td>010****9999</td>
-						<td>010****5678</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>benefi_D39168575700412603484</td>
-						<td>010****9999</td>
-						<td>010****5678</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>benefi_D39168575700412603484</td>
-						<td>010****9999</td>
-						<td>010****5678</td>
-						<td><input type="checkbox"></td>
-					</tr>
-					<tr>
-						<td>benefi_D39168575700412603484</td>
-						<td>010****9999</td>
-						<td>010****5678</td>
-						<td><input type="checkbox"></td>
-					</tr>
+				</#list>
 				</tbody>
 			</table>
 			<!-- //table -->
