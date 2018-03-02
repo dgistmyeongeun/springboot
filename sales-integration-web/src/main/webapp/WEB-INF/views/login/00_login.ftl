@@ -12,8 +12,8 @@ jQuery( function($) { // HTML 문서를 모두 읽으면 포함한 코드를 실
     var re_pw = /^[a-z0-9_-]{6,18}$/; // 비밀번호 검사식
     
     var form = $('.login_form'),
-        uid = $('#id'),
-        upw = $('#pw'),
+        uid = $('#empno'),
+        upw = $('#passwd'),
         otp = $('#otp');
        
     // 선택한 form에 서밋 이벤트가 발생하면 실행한다
@@ -35,7 +35,7 @@ jQuery( function($) { // HTML 문서를 모두 읽으면 포함한 코드를 실
     });
      
     // #uid, #upw 에 입력된 값의 길이정보 제공.
-    $('#id, #pw').after('<strong></strong>');
+    $('#empno, #passwd').after('<strong></strong>');
      
     uid.keyup( function() {
         var s = $(this).next('strong'); // strong 요소를 변수에 할당
